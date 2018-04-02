@@ -9,14 +9,24 @@ exports.config = {
     './e2e/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    browserName: 'chrome',
+    chromeOptions: {
+      args: [
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox"
+      ]
+    }
   },
   directConnect: true,
-  baseUrl: 'http://localhost:4200/',
+  baseUrl: 'http://0.0.0.0:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 30000,
+    showTiming: true,
+    isVerbose: false,
+    includeStackTrace: false,
+    showColors: true, // If true, print colors to the terminal.
+    defaultTimeoutInterval: 400000, // Default time to wait in ms before a test fails.
     print: function() {}
   },
   onPrepare() {
