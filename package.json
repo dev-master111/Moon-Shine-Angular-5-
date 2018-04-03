@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --disable-host-check",
+    "start": "ng serve --disable-host-check -lr -w",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "5.2.4",
     "@angular/platform-browser-dynamic": "5.2.4",
     "@angular/router": "5.2.4",
+    "angular-l10n": "^4.1.5",
     "bootstrap": "^4.0.0-beta.3",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
