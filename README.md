@@ -30,8 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Style/Coding Guidelines
 
 * Indent using 2 spaces.
-* Use boostrap 4 conventions where possible.
+* Use boostrap 4 conventions where possible. If bootstrap has it defined, do not redefine the style.
+  - For example: if you see something that needs to be centered use `mx-auto` or `text-center` from bootstrap rather than defining a SaSS class that has `margin: 0 auto;` or `text-align: center;`
+* **NOTE:** Do not copy the SCSS logic directly from Zeplin. It is bloated and does not confirm to our application.
 * Please take advantage of an editor that will use the provided tslint.json
+* We have specific lint rules configured. Please run `npm run lint` before submitting your code and ensure all lint violations are fixed before committing.
 * Create content with a focus on iPad constraints.
   * Use Chrome mobile device set to iPad, if possible ([developers.google.com](https://developers.google.com/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports))
 
@@ -80,7 +83,7 @@ attribute of the containing element to avoid escaping the html:
 ```javascript
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Language, TranslationService } from 'angular-l10n';
-import { AppService, LogService } from './../../services';
+import { template, templateSettings } from 'lodash';
 
 @Component({
   selector: 'app-example-component',
@@ -93,28 +96,32 @@ export class ExampleComponent implements OnInit, OnDestroy {
   public translatedHello: string = '';
 
   constructor(
-    public alertService: AlertService,
-    public appService: AppService,
     public translationService: TranslationService
   ) { }
 
   public ngOnInit() {
-    this.logService.log('Initializing the example component');
+    console.log('Initializing the example component');
 
-    translateHelloTemplate();
+    this.translateHelloTemplate();
   }
 
   public ngOnDestroy() {
-    this.logService.log('Destroying the example component');
+    console.log('Destroying the example component');
   }
 
-  private translateHelloTemplate() {
+  public translateHelloTemplate(): void {
     const user = { fullName: 'Random User' }
-    this.translatedHello = this.appService.replaceTranslationTemplate(
+    this.translatedHello = this.replaceTranslationTemplate(
       // common_hello_user = "Hello, %{user}. Welcome to your dashboard."
       this.translationService.translate('common_hello_user'),
       { user: user.fullName }
     );
+  }
+
+  public replaceTranslationTemplate(translatedText: string, replacementObject: any): string {
+    templateSettings.interpolate = /%{([\s\S]+?)}/g;
+    const compiled = template(translatedText);
+    return compiled(replacementObject);
   }
 }
 ```
