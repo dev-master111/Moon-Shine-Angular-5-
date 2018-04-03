@@ -10,7 +10,7 @@ import { Language, TranslationService } from 'angular-l10n';
    * This is necessary when we use component specific stylesheets. If you do not
    * have this line, your local styles will not be applied to the view.
    */
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit, OnDestroy {
   @Language() lang: string;
