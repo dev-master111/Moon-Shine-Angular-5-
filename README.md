@@ -25,3 +25,87 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Localization (l10n)
+
+To directly replace element content with translated static content:
+```html
+<div class="hello-message" l10nTranslate>common_hello_message</div>
+```
+
+When you need to do something to the string like interpolate a value (translated
+content that includes the username or validation messages that include dynamic
+values like min/max lengths), just translate the value in the component
+typescript using TranslationService
+```json
+common_hello_user = "Hello, %{user}. Welcome to your dashboard."
+```
+```javascript
+  private translateHelloTemplate() {
+    const exampleUser = 'Random User';
+    this.translatedHello = this.appService.replaceTranslationTemplate(
+      this.translationService.translate('common_hello_user'),
+      { user: exampleUser }
+    );
+  }
+```
+then use string interpolation as you would any other dynamic content.
+```html
+<div class="hello-message">{{ translatedHello }}</div>
+```
+
+Sometimes translated content will need values replaced _and_ contain html, which
+would be escaped in the previous example.  Let's code as if the previous example
+wrapped the `%{user}` value in a span to change the color of the text.
+```json
+common_hello_user = "Hello, <span class=\"color blue\">%{user}</span>. Welcome to your dashboard."
+```
+In this case, you can do the interpolation and translation in the component
+typescript and then render it in the page by binding it to the innerHtml
+attribute of the containing element to avoid escaping the html:
+```html
+<div class="hello-message" [innerHtml]="translatedHello"></div>
+```
+
+*app/pages/example/example.component.ts*
+```javascript
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Language, TranslationService } from 'angular-l10n';
+import { AppService, LogService } from './../../services';
+
+@Component({
+  selector: 'app-example-component',
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./example.component.scss'],
+  templateUrl: './example.component.html'
+})
+export class ExampleComponent implements OnInit, OnDestroy {
+  @Language() lang: string;
+  public translatedHello: string = '';
+
+  constructor(
+    public alertService: AlertService,
+    public appService: AppService,
+    public translationService: TranslationService
+  ) { }
+
+  public ngOnInit() {
+    this.logService.log('Initializing the example component');
+
+    translateHelloTemplate();
+  }
+
+  public ngOnDestroy() {
+    this.logService.log('Destroying the example component');
+  }
+
+  private translateHelloTemplate() {
+    const user = { fullName: 'Random User' }
+    this.translatedHello = this.appService.replaceTranslationTemplate(
+      // common_hello_user = "Hello, %{user}. Welcome to your dashboard."
+      this.translationService.translate('common_hello_user'),
+      { user: user.fullName }
+    );
+  }
+}
+```
