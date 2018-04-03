@@ -33,6 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Use boostrap 4 conventions where possible. If bootstrap has it defined, do not redefine the style.
   - For example: if you see something that needs to be centered use `mx-auto` or `text-center` from bootstrap rather than defining a SaSS class that has `margin: 0 auto;` or `text-align: center;`
 * **NOTE:** Do not copy the SCSS logic directly from Zeplin. It is bloated and does not conform to our application.
+* You can check out a simple example of how to implement our SaSS Mixins and Variables in the `app.component.scss` along with how to use the Proxima Nova font that is listed in the SaSS fonts file.
 * Please take advantage of an editor that will use the provided tslint.json
 * We have specific lint rules configured. Please run `npm run lint` before submitting your code and ensure all lint violations are fixed before committing.
 * Create content with a focus on iPad constraints.
