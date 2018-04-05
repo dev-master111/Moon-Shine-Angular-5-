@@ -1,12 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-
-// Pages/Components
-import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 
 // Third Party Components for localization
 import {
@@ -38,21 +31,17 @@ const l10nConfig: L10nConfig = {
 };
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    LocalizationModule.forRoot(l10nConfig),
-    LocaleValidationModule.forRoot()
+    CommonModule,
+    LocalizationModule.forChild(l10nConfig)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [],
+  exports: [
+    LocalizationModule,
+    LocaleValidationModule
+  ]
 })
-export class AppModule {
+export class SharedModule {
   constructor(public l10nLoader: L10nLoader) {
     this.l10nLoader.load();
   }

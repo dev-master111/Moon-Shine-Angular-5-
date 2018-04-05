@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Element/Icon/List</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Element/Icon/List">
+            <g id="ic_format_quote_48px" transform="translate(12.500000, 12.500000) scale(-1, -1) translate(-12.500000, -12.500000) translate(3.000000, 6.000000)"></g>
+            <g id="list-bullet" transform="translate(3.000000, 3.000000)" fill="#444444" fill-rule="nonzero">
+                <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                <circle id="Oval" cx="2" cy="8" r="2"></circle>
+                <circle id="Oval" cx="2" cy="14" r="2"></circle>
+                <rect id="Rectangle-path" x="6" y="1" width="10" height="2"></rect>
+                <rect id="Rectangle-path" x="6" y="7" width="10" height="2"></rect>
+                <rect id="Rectangle-path" x="6" y="13" width="10" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Element/Icon/- circle-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Element/Icon/--circle-white" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="circle-delete">
+                <path d="M11,0 C4.93225806,0 0,4.93225806 0,11 C0,17.0677419 4.93225806,22 11,22 C17.0677419,22 22,17.0677419 22,11 C22,4.93225806 17.0677419,0 11,0 Z M17.5333333,12 L4.46666667,12 C4.18666667,12 4,11.8 4,11.5 C4,11.2 4.18666667,11 4.46666667,11 L17.5333333,11 C17.8133333,11 18,11.2 18,11.5 C18,11.8 17.8133333,12 17.5333333,12 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

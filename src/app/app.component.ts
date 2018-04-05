@@ -1,7 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 
-import { Language, TranslationService } from 'angular-l10n';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,12 +11,9 @@ import { Language, TranslationService } from 'angular-l10n';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit, OnDestroy {
-  @Language() lang: string;
   title = 'app';
 
-  constructor(
-    public translationService: TranslationService
-  ) { }
+  constructor() { }
 
   public ngOnInit() {
     console.log('Initializing the app component');

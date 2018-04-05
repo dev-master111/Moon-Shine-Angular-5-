@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Element/Icon/Expand-Black Close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Element/Icon/Expand-Black-Close" stroke="#4A4A4A">
+            <g id="Group-4" transform="translate(6.000000, 11.000000) rotate(-180.000000) translate(-6.000000, -11.000000) translate(3.000000, 8.000000)">
+                <polyline id="Shape" points="3.2 5.66666667 0.533333333 3 3.2 0.333333333"></polyline>
+                <path d="M5.86666667,3 L0.533333333,3" id="Shape"></path>
+            </g>
+            <g id="Group-3" transform="translate(16.000000, 11.000000) rotate(-180.000000) translate(-16.000000, -11.000000) translate(13.000000, 8.000000)">
+                <polyline id="Shape" points="2.8 5.66666667 5.46666667 3 2.8 0.333333333"></polyline>
+                <path d="M5.46666667,3 L0.133333333,3" id="Shape"></path>
+            </g>
+            <g id="Group" transform="translate(11.000000, 6.000000) rotate(-180.000000) translate(-11.000000, -6.000000) translate(8.000000, 3.000000)">
+                <polyline id="Shape" points="0.333333333 3.2 3 0.533333333 5.66666667 3.2"></polyline>
+                <path d="M3,5.86666667 L3,0.533333333" id="Shape"></path>
+            </g>
+            <g id="Group-2" transform="translate(11.000000, 16.000000) rotate(-180.000000) translate(-11.000000, -16.000000) translate(8.000000, 13.000000)">
+                <polyline id="Shape" points="0.333333333 2.8 3 5.46666667 5.66666667 2.8"></polyline>
+                <path d="M3,5.46666667 L3,0.133333333" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

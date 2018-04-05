@@ -1,0 +1,98 @@
+<div class="text-center mx-auto mw-100 overview-component">
+  <div class="rounded-top top-bar">
+    <div class="text-left text-train-title" l10nTranslate>train_train_title</div>
+  </div>
+  <div class="d-flex inner-content">
+    <div class="left-content-holder">
+      <img class="user-avatar" [src]="user.avatar"/>
+      <div class="user-name">{{ user.name }}</div>
+      <div class="user-job-title">{{ user.jobTitle }}</div>
+      <div class="user-motives">
+        <span l10nTranslate>navigation_motives</span>:
+        <span>{{ user.motives }}</span>
+      </div>
+      <div class="user-conflict">
+        <span l10nTranslate>navigation_conflict</span>:
+        <span>{{ user.conflict }}</span>
+      </div>
+      <div class="sdi-date">
+        <span l10nTranslate>train_text_sdi2</span>
+        <span>{{ user.sdiDate | date:'d MMMM y' }}</span>
+        <!-- <span [innerHtml]="translateTemplate('train_text_sdi2', {sdiDate: user.sdiDate})"></span> -->
+      </div>
+    </div>
+    <div class="d-flex middle-content-holder">
+      <div class="summary-section">
+        <div class="red-facilitator-banner">
+          <div class="text-uppercase">
+            <div class="text-premier" l10nTranslate>train_text_premier</div>
+            <div class="text-facilitator" l10nTranslate>train_text_facilitator</div>
+          </div>
+          <div class="line-facilitator"></div>
+          <div class="csa-certified">
+            <img src="assets/images/train/Train_Card_bluestar_circle.svg"/>
+            <div l10nTranslate>train_csa_certified</div>
+          </div>
+          <div class="csa-certified">
+            <img src="assets/images/train/Train_Card_bluestar_circle.svg"/>
+            <div l10nTranslate>train_csr_certified</div>
+          </div>
+        </div>
+        <div class="text-uppercase text-facilitator-id">
+          <div l10nTranslate>train_facilitator_id</div>
+          <div class="facilitator-id">{{ user.facilitatorID }}</div>
+        </div>
+      </div>
+      <div class="text-uppercase rating-section">
+        <div class="text-facilitator-rating" l10nTranslate>train_facilitator_rating</div>
+        <div class="d-flex align-items-center facilitator-rating">
+          <div class="facilitator-rating-score">{{ user.facilitatorRatingScore }}</div>
+          <div class="text-left">
+            <img src="assets/images/Icons/Graph - Gray.svg"/>
+            <div class="text-out-of-5" l10nTranslate>train_out_of_5</div>
+          </div>
+        </div>
+        <div class="blue-score-underline-text evaluations">
+          <a href="" class="evaluations-score">{{ user.evaluationsScore }}</a>
+          <div class="text-evaluations" l10nTranslate>train_text_evaluations</div>
+        </div>
+      </div>
+      <div class="text-uppercase trained-section">
+        <div class="text-trained" l10nTranslate>train_text_trained</div>
+        <div class="blue-score-underline-text">
+          <a href="" class="evaluations-score classes-number">{{ user.classesNumber }}</a>
+          <div class="text-evaluations text-classes" l10nTranslate>navigation_classes</div>
+        </div>
+        <div class="blue-score-underline-text">
+          <a href="" class="evaluations-score learners-number">{{ user.learnersNumber }}</a>
+          <div class="text-evaluations text-learners" l10nTranslate>train_text_learners</div>
+        </div>
+      </div>        
+    </div>
+    <div class="text-uppercase right-content-holder">
+      <div class="text-available" l10nTranslate>train_text_available</div>
+      <div class="blue-score-underline-text">
+        <a href="" class="evaluations-score toolkits-number">{{ user.toolkitsNumber }}</a>
+        <div class="text-evaluations text-toolkits" l10nTranslate>train_toolkits_text</div>
+      </div>
+      <div class="blue-score-underline-text">
+        <a href="" class="evaluations-score credits-number">{{ user.creditsNumber }}</a>
+        <div class="text-evaluations text-credits" l10nTranslate>inventory_credits_text</div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex text-uppercase rounded-bottom bottom-bar">
+    <div class="d-flex align-items-center re-gen-div">
+      <img src="assets/images/Icons/Train_Re-Gen.svg"/>
+      <div class="text-re-gen" l10nTranslate>train_re_gen_text</div>
+    </div>
+    <div class="text-left platform-key-div">
+      <div class="text-platform-key" l10nTranslate>train_platform_key</div>
+      <div class="d-flex align-items-center">
+        <div class="rounded platform-key">{{ user.platformKey }}</div>
+        <button class="btn btn-copy" l10nTranslate>common_copy_button</button>
+      </div>
+    </div>
+    <div class="d-flex align-items-center text-transactions" l10nTranslate>navigation_transactions</div>
+  </div>
+</div>

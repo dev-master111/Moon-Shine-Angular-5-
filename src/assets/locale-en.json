@@ -443,5 +443,23 @@
   "sign_in_sso_subtitle": "Login to your Core Cloud account via SSO.",
   "profile_language_updated": "Language setting updated.",
   "profile_profile_sharing_updated": "Profile Sharing setting updated.",
-  "common_please_wait": "Please wait..."
+  "common_please_wait": "Please wait...",
+
+  "train_train_title": "Train",
+  "train_text_sdi2": "SDI 2.0 - ",
+  "train_text_premier": "Premier",
+  "train_text_facilitator": "Facilitator",
+  "train_csa_certified": "CSA Certified",
+  "train_csr_certified": "CSR Certified",
+  "train_facilitator_id": "Facilitator id",
+  "train_facilitator_rating": "Facilitator rating",
+  "train_out_of_5": "Out of 5",
+  "train_text_evaluations": "Evaluations",
+  "train_text_trained": "Trained",
+  "train_text_learners": "Learners",
+  "train_text_available": "Available",
+  "train_toolkits_text": "Toolkits",
+  "inventory_credits_text": "Credits",
+  "train_re_gen_text": "Re-gen",
+  "train_platform_key": "Platform key"
 }

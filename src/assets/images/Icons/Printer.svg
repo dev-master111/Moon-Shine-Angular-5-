@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Element/Icon/Printer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Element/Icon/Printer" stroke="#444444">
+            <g id="print" transform="translate(2.000000, 2.000000)" stroke-width="0.8">
+                <path d="M3.68852459,13.7213115 L0.147540984,13.7213115 L0.147540984,5.45901639 C0.147540984,4.80718033 0.676032787,4.27868852 1.32786885,4.27868852 L16.6721311,4.27868852 C17.3239672,4.27868852 17.852459,4.80718033 17.852459,5.45901639 L17.852459,13.7213115 L14.3114754,13.7213115" id="Shape"></path>
+                <polyline id="Shape" points="3.68852459 2.50819672 3.68852459 0.147540984 14.3114754 0.147540984 14.3114754 2.50819672"></polyline>
+                <rect id="Rectangle-path" x="3.68852459" y="9" width="10.6229508" height="8.85245902"></rect>
+            </g>
+            <path d="M8,14 L14,14" id="Shape"></path>
+            <path d="M8,17 L14,17" id="Shape-Copy"></path>
+        </g>
+    </g>
+</svg>
