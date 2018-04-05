@@ -154,7 +154,7 @@ $train-very-dark-blue: #4a90e2;
 
     .right-content-holder {
       padding: 20px 33px 34px;
-      border-left: solid 1px $border-gray;
+      border-left: solid 2px $border-gray;
 
       .text-available {
         font-family: "proxima_novasemibold", Arial, sans-serif;
@@ -195,7 +195,7 @@ $train-very-dark-blue: #4a90e2;
         border-radius: 3px;
         background-color: $medium-blue;
         border: solid 1px $medium-blue;
-        padding: 5px 28px;
+        padding: 4px 28px;
         color: $white;
       }
     }
@@ -207,6 +207,7 @@ $train-very-dark-blue: #4a90e2;
       padding-left: 15px;
       padding-right: 15px;
       border-left: solid 2px $black;
+      color: $white;
     }
   }
 }
