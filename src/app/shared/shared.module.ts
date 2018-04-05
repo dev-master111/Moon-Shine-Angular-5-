@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// Third Party Components for localization
+import { ClipboardModule } from 'ngx-clipboard';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+
+// Third Party Components
 import {
   L10nConfig,
   L10nLoader,
@@ -34,12 +37,16 @@ const l10nConfig: L10nConfig = {
 @NgModule({
   imports: [
     CommonModule,
-    LocalizationModule.forChild(l10nConfig)
+    ClipboardModule,
+    LocalizationModule.forChild(l10nConfig),
+    SimpleNotificationsModule.forRoot()
   ],
   declarations: [IconButtonComponent],
   exports: [
     LocalizationModule,
     LocaleValidationModule,
+    ClipboardModule,
+    SimpleNotificationsModule,
     IconButtonComponent
   ]
 })
