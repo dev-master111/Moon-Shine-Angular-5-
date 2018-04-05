@@ -6,7 +6,7 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 
 import { ComponentsModule } from './components/components.module';
 
-// Third Party Components
+// Third Party Localization Module
 import {
   L10nConfig,
   L10nLoader,

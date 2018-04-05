@@ -1,13 +1,45 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Third Party Localization Module
+import {
+  L10nConfig,
+  L10nLoader,
+  LocalizationModule,
+  LocaleValidationModule,
+  StorageStrategy,
+  ProviderType
+} from 'angular-l10n';
+const l10nConfig: L10nConfig = {
+  locale: {
+    languages: [
+      { code: 'en', dir: 'ltr' }
+    ],
+    defaultLocale: { languageCode: 'en', countryCode: 'US' },
+    currency: 'USD',
+    storage: StorageStrategy.Cookie
+  },
+  translation: {
+    providers: [
+      { type: ProviderType.Static, prefix: '/assets/locale-' }
+    ],
+    caching: true,
+    missingValue: 'No key',
+    composedKeySeparator: '.',
+    i18nPlural: true
+  }
+};
+
 import { IconButtonComponent } from './icon-button/icon-button.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    LocalizationModule.forChild(l10nConfig),
   ],
   exports: [
+    LocalizationModule,
+    LocaleValidationModule,
     IconButtonComponent
   ],
   declarations: [
