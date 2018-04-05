@@ -37,6 +37,10 @@ export class OverviewComponent implements OnInit {
     return compiled(replacementObject);
   }
 
+  getGraphURL() {
+    return `assets/images/Icons/Graph - ${Math.ceil(this.user.facilitatorRatingScore)}.svg`;
+  }
+
   reGenerate() {
 
   }

@@ -48,7 +48,7 @@
         <div class="d-flex align-items-center facilitator-rating">
           <div class="facilitator-rating-score">{{ user.facilitatorRatingScore }}</div>
           <div class="text-left">
-            <img src="assets/images/Icons/Graph - Gray.svg"/>
+            <img [src]="getGraphURL()"/>
             <div class="text-out-of-5" l10nTranslate>train_out_of_5</div>
           </div>
         </div>
