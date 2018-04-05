@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ClipboardModule } from 'ngx-clipboard';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 
+import { ComponentsModule } from './components/components.module';
+
 // Third Party Components
 import {
   L10nConfig,
@@ -13,7 +15,6 @@ import {
   StorageStrategy,
   ProviderType
 } from 'angular-l10n';
-import { IconButtonComponent } from './components/icon-button/icon-button.component';
 const l10nConfig: L10nConfig = {
   locale: {
     languages: [
@@ -39,15 +40,17 @@ const l10nConfig: L10nConfig = {
     CommonModule,
     ClipboardModule,
     LocalizationModule.forChild(l10nConfig),
-    SimpleNotificationsModule.forRoot()
+    SimpleNotificationsModule.forRoot(),
+
+    ComponentsModule
   ],
-  declarations: [IconButtonComponent],
   exports: [
     LocalizationModule,
     LocaleValidationModule,
     ClipboardModule,
     SimpleNotificationsModule,
-    IconButtonComponent
+
+    ComponentsModule
   ]
 })
 export class SharedModule {

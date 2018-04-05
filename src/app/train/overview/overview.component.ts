@@ -27,21 +27,6 @@ export class OverviewComponent implements OnInit {
 
   }
 
-  public translateTemplate(localizationKey: string, replacementObject: any): string {
-    const translatedText = this.replaceTranslationTemplate(
-      this.translationService.translate(localizationKey),
-      replacementObject
-    );
-
-    return translatedText;
-  }
-
-  public replaceTranslationTemplate(translatedText: string, replacementObject: any): string {
-    templateSettings.interpolate = /%{([\s\S]+?)}/g;
-    const compiled = template(translatedText);
-    return compiled(replacementObject);
-  }
-
   getGraphURL() {
     return `assets/images/Icons/Graph - ${Math.ceil(this.user.facilitatorRatingScore)}.svg`;
   }
@@ -58,5 +43,21 @@ export class OverviewComponent implements OnInit {
 
   reGenerate() {
 
+  }
+
+  // TODO: Should move to a common service
+  public translateTemplate(localizationKey: string, replacementObject: any): string {
+    const translatedText = this.replaceTranslationTemplate(
+      this.translationService.translate(localizationKey),
+      replacementObject
+    );
+
+    return translatedText;
+  }
+
+  public replaceTranslationTemplate(translatedText: string, replacementObject: any): string {
+    templateSettings.interpolate = /%{([\s\S]+?)}/g;
+    const compiled = template(translatedText);
+    return compiled(replacementObject);
   }
 }
