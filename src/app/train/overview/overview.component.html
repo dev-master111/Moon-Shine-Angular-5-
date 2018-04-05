@@ -9,11 +9,11 @@
       <div class="user-job-title">{{ user.jobTitle }}</div>
       <div class="user-motives">
         <span l10nTranslate>navigation_motives</span>:
-        <span>{{ user.motives }}</span>
+        <span [innerHtml]="colorizeMvsCsService.motivesHtml(user.motives)"></span>
       </div>
       <div class="user-conflict">
         <span l10nTranslate>navigation_conflict</span>:
-        <span>{{ user.conflict }}</span>
+        <span [innerHtml]="colorizeMvsCsService.conflictSequenceHtml(user.conflict)"></span>
       </div>
       <div class="sdi-date">
         <span l10nTranslate>train_text_sdi2</span>

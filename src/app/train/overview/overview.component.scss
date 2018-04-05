@@ -11,6 +11,10 @@ $train-very-dark-blue: #4a90e2;
   color: $white;
   width: 726px;
 
+  .color {
+    @include pspPersonalityColors;
+  }
+
   .blue-score-underline-text {
     a {
       font-family: "proxima_novamedium", Arial, sans-serif;

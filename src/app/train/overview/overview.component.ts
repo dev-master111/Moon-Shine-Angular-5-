@@ -1,14 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Language, TranslationService } from 'angular-l10n';
 import { template, templateSettings } from 'lodash';
 import { NotificationsService } from 'angular2-notifications';
 
 import { User } from '../../shared/model';
+import { ColorizeMvsCsService } from '../../shared/services';
 
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.scss']
+  styleUrls: ['./overview.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class OverviewComponent implements OnInit {
   @Language() lang: string;
@@ -20,7 +22,8 @@ export class OverviewComponent implements OnInit {
 
   constructor(
     private _notifications: NotificationsService,
-    public translationService: TranslationService
+    private translationService: TranslationService,
+    private colorizeMvsCsService: ColorizeMvsCsService
   ) { }
 
   ngOnInit() {
