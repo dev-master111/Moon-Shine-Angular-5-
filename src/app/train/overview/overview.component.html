@@ -83,8 +83,11 @@
   </div>
   <div class="d-flex text-uppercase rounded-bottom bottom-bar">
     <div class="d-flex align-items-center re-gen-div">
-      <img src="assets/images/Icons/Train_Re-Gen.svg"/>
-      <div class="text-re-gen" l10nTranslate>train_re_gen_text</div>
+      <app-icon-button
+        [iconUrl]="'assets/images/Icons/Train_Re-Gen.svg'"
+        [text]="'train_re_gen_text'"
+        (onclick)="reGenerate()">
+      </app-icon-button>
     </div>
     <div class="text-left platform-key-div">
       <div class="text-platform-key" l10nTranslate>train_platform_key</div>
@@ -93,6 +96,6 @@
         <button class="btn btn-copy" l10nTranslate>common_copy_button</button>
       </div>
     </div>
-    <div class="d-flex align-items-center text-transactions" l10nTranslate>navigation_transactions</div>
+    <a href="" class="d-flex align-items-center text-transactions" l10nTranslate>navigation_transactions</a>
   </div>
 </div>

@@ -10,6 +10,7 @@ import {
   StorageStrategy,
   ProviderType
 } from 'angular-l10n';
+import { IconButtonComponent } from './components/icon-button/icon-button.component';
 const l10nConfig: L10nConfig = {
   locale: {
     languages: [
@@ -35,10 +36,11 @@ const l10nConfig: L10nConfig = {
     CommonModule,
     LocalizationModule.forChild(l10nConfig)
   ],
-  declarations: [],
+  declarations: [IconButtonComponent],
   exports: [
     LocalizationModule,
-    LocaleValidationModule
+    LocaleValidationModule,
+    IconButtonComponent
   ]
 })
 export class SharedModule {

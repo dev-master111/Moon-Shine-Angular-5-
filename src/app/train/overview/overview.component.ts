@@ -36,4 +36,8 @@ export class OverviewComponent implements OnInit {
     const compiled = template(translatedText);
     return compiled(replacementObject);
   }
+
+  reGenerate() {
+
+  }
 }

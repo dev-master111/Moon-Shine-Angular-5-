@@ -83,7 +83,7 @@ $train-very-dark-blue: #4a90e2;
     .middle-content-holder {
       .summary-section {
         .red-facilitator-banner {
-          background-image: url(assets/images/train/Train_Card_Red_Ribbon.svg);
+          background-image: url(/assets/images/train/Train_Card_Red_Ribbon.svg);
           background-size: cover;
           padding: 15px 9px 41px 10px;
 
@@ -170,24 +170,11 @@ $train-very-dark-blue: #4a90e2;
       padding-left: 46px;
       padding-right: 46px;
       border-right: solid 2px $black;
-
-      img {
-      
-      }
-  
-      .text-re-gen {
-        font-family: "proxima_novamedium", Arial, sans-serif;
-        line-height: 1;
-        letter-spacing: 0.8px;
-        color: #f8e71c;
-        padding-left: 5px;
-      }
-  
     }
 
     .platform-key-div {
       font-size: 10px;
-      padding: 10px 25px 10px 16px;
+      padding: 10px 26px 10px 16px;
 
       .text-platform-key {
         letter-spacing: 0.6px;
@@ -195,9 +182,9 @@ $train-very-dark-blue: #4a90e2;
       }
 
       .platform-key {
-        width: 265px;
+        width: 260px;
         padding: 8px;
-        margin-right: 25px;
+        margin-right: 28px;
         background-color: $black;
       }
 
@@ -208,7 +195,7 @@ $train-very-dark-blue: #4a90e2;
         border-radius: 3px;
         background-color: $medium-blue;
         border: solid 1px $medium-blue;
-        padding: 5px 25px;
+        padding: 5px 28px;
         color: $white;
       }
     }
