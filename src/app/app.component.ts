@@ -11,7 +11,6 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'app';
 
   constructor() { }
 
