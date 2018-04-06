@@ -31,6 +31,7 @@ const l10nConfig: L10nConfig = {
 };
 
 import { IconButtonComponent } from './icon-button/icon-button.component';
+import { ConflictBarComponent } from './conflict-bar/conflict-bar.component';
 
 @NgModule({
   imports: [
@@ -40,10 +41,12 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
   exports: [
     LocalizationModule,
     LocaleValidationModule,
-    IconButtonComponent
+    IconButtonComponent,
+    ConflictBarComponent
   ],
   declarations: [
-    IconButtonComponent
+    IconButtonComponent,
+    ConflictBarComponent
   ],
   entryComponents: []
 })

@@ -1,0 +1,36 @@
+
+@import '../../../../mixins';
+@import '../../../../variables';
+
+$conflict-bar-base-width: 740px;
+$conflict-bar-base-height: 31px;
+
+.color {
+  @include pspPersonalityColors;
+}
+
+.percentage {
+  font-family: "proxima_novaregular", Arial, sans-serif; 
+  font-size: $base-font-size;
+  line-height: normal;
+  color: $white;
+  width: $conflict-bar-base-width*0.05;
+  height: $conflict-bar-base-height;
+  margin-right: 4px;
+
+  @include pspBackgroundPersonalityColors;
+}
+
+.detail {
+  width: $conflict-bar-base-width;
+
+  .top-bar {
+    height: $conflict-bar-base-height*0.58;
+
+    @include pspBackgroundPersonalityColors;
+  }
+
+  .text {
+    @include pspPersonalityColors;
+  }
+}

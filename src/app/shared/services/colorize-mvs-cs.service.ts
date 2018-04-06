@@ -49,6 +49,58 @@ export class ColorizeMvsCsService {
   }
 
   /**
+   * FOR CONFLICT BAR COMPONENT ONLY! Should be fixed later according to data model format.
+   * Wrap conflict sequence words associated with a user's personality results in
+   * <span> tags with the proper css class so that we can show the word with
+   * it's appropriate color in the UI.
+   *
+   * @param {string} wordString A string containing the words that need to be wrapped in spans with
+   *                            the appropriate CSS classess such that the word is colored in the color
+   *                            associated with the word. String format MUST be something like
+   *                            [BRG] = [Accommodate-Assert-Anaylze], [RG] = [Assert-Anaylze], etc...
+   *                            wordString should contain either Assert, Analyze, Accommodate, hub and
+   *                            combination of B and G and R.
+   * @param {cssClass} cssClass Optional css class to be applied to the main span element
+   * @returns string
+   */
+  public conflictSequenceHtmlForConflictBarOnly(wordString: string, cssClass?: string): string {
+    let innerContent = '';
+    if (!wordString) {
+      return innerContent;
+    }
+
+    let color        = wordString;
+    const colorLower = color.toLowerCase();
+    let spanStart    = '<span class="color';
+    const spanEnd    = '</span>';
+    if (cssClass) {
+      spanStart += ` ${cssClass}`;
+    }
+
+    // When the value is "HUB", the H should be blue, the U should be
+    // red, and the B should be green.
+    if (colorLower === 'hub') {
+      // each letter in hub has a different color so we need to
+      // treat this color differently
+      const letters = color.split('');
+      letters.forEach((letter: string) => {
+        innerContent += `${spanStart} ${letter.toLowerCase()}">${letter}${spanEnd}`;
+      });
+    } else {
+      // Replace the letters with spans containing classes to show
+      // each letter  in it's respective color
+      color = color.replace(/B/, `${spanStart} blue">B${spanEnd}`);
+      color = color.replace(/Accommodate/, `${spanStart} blue">Accommodate${spanEnd}`);
+      color = color.replace(/G/, `${spanStart} green">G${spanEnd}`);
+      color = color.replace(/Analyze/, `${spanStart} green">Analyze${spanEnd}`);
+      color = color.replace(/R/, `${spanStart} red">R${spanEnd}`);
+      innerContent = color.replace(/Assert/, `${spanStart} red">Assert${spanEnd}`);
+    }
+
+    return innerContent;
+  }
+
+  /**
    * Wrap movitational words associated with a user's personality results in
    * <span> tags with the proper css class so that we can show the word with
    * it's appropriate color in the UI.

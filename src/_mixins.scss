@@ -154,6 +154,22 @@ $browser-context: 14;
   &.hub {
     background-color: $psp-hub;
   }
+
+  &.red-green {
+    background: linear-gradient(104deg, $psp-red, $psp-green);
+  }
+
+  &.red-blue {
+    background: linear-gradient(286deg, $psp-red, $psp-blue);
+  }
+
+  &.blue-green {
+    background: linear-gradient(117deg, $psp-blue, $psp-green);
+  }
+
+  &.red-blue-green {
+    background: linear-gradient(110deg, $psp-blue, $psp-red 54%, $psp-green);
+  }
 }
 
 @mixin pspPersonalityBarColors($image-directory-path) {
