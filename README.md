@@ -32,6 +32,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Indent using 2 spaces.
 * Use boostrap 4 conventions where possible. If bootstrap has it defined, do not redefine the style.
   - For example: if you see something that needs to be centered use `mx-auto` or `text-center` from bootstrap rather than defining a SaSS class that has `margin: 0 auto;` or `text-align: center;`
+* **DO NOT** use the [Bootstrap components](https://getbootstrap.com/docs/4.0/components). These components are JavaScript based components that we are not using. Please use [ng-boostrap](https://ng-bootstrap.github.io/#/home) components instead.
 * **NOTE:** Do not copy the SCSS logic directly from Zeplin. It is bloated and does not conform to our application.
 * You can check out a simple example of how to implement our SaSS Mixins and Variables in the `app.component.scss` along with how to use the Proxima Nova font that is listed in the SaSS fonts file.
 * Please take advantage of an editor that will use the provided tslint.json
