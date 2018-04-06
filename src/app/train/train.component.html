@@ -1,5 +1,36 @@
-<div class="train-page">
+<div class="text-center mx-auto mw-100 train-page">
   <div class="overview-container">
     <app-overview [user]="user"></app-overview>
   </div>
+  <div>
+    <app-organization-summary></app-organization-summary>
+  </div>
+  <div>
+    <app-relationship-impact
+      [relationshipImpacts]="7908"
+      [sdiCompletedNumber]="6754"
+      [sdiPendingNumber]="742"
+      [feedbackCompletedNumber]="14125"
+      [feedbackPendingNumber]="1129"
+      [roleExpectationNumber]="7754"
+      [roleExpectationPendingNumber]="346">
+    </app-relationship-impact>
+  </div>
+  <div class="grey-divider"></div>
+  <div>
+    <!-- <app-create-management-team></app-create-management-team> -->
+    <app-edit-management-team></app-edit-management-team>
+  </div>
+  <!-- <div>
+    <app-conflict-bar 
+      [barColor]="'green'"
+      [text]="'GREEN = Analyze'"
+      [percentage]="29">
+    </app-conflict-bar>
+    <app-conflict-bar
+      [barColor]="'red-green'"
+      [text]="'[RG] = [Assert-Analyze]'"
+      [percentage]="2">
+    </app-conflict-bar>
+  </div> -->
 </div>

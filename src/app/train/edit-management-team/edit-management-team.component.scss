@@ -1,0 +1,35 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+@mixin title-style {
+}
+
+.edit-management-team-component {
+  position: relative;
+  color: $body-text-color;
+  padding:40px 24px;
+
+  .title {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .sub-title {
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    text-align: center;
+    margin-top: 7px;
+  }
+
+  a {
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    font-weight: 600;
+    color: $medium-blue;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+  }
+}

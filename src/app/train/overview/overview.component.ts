@@ -1,6 +1,4 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { Language, TranslationService } from 'angular-l10n';
-import { template, templateSettings } from 'lodash';
 import { NotificationsService } from 'angular2-notifications';
 
 import { User } from '../../shared/model';
@@ -13,7 +11,6 @@ import { ColorizeMvsCsService } from '../../shared/services';
   encapsulation: ViewEncapsulation.None
 })
 export class OverviewComponent implements OnInit {
-  @Language() lang: string;
   @Input() user: User;
   public translatedSdiDate: string = '';
   public options = {
@@ -22,7 +19,6 @@ export class OverviewComponent implements OnInit {
 
   constructor(
     private _notifications: NotificationsService,
-    private translationService: TranslationService,
     private colorizeMvsCsService: ColorizeMvsCsService
   ) { }
 
@@ -46,21 +42,5 @@ export class OverviewComponent implements OnInit {
 
   reGenerate() {
 
-  }
-
-  // TODO: Should move to a common service
-  public translateTemplate(localizationKey: string, replacementObject: any): string {
-    const translatedText = this.replaceTranslationTemplate(
-      this.translationService.translate(localizationKey),
-      replacementObject
-    );
-
-    return translatedText;
-  }
-
-  public replaceTranslationTemplate(translatedText: string, replacementObject: any): string {
-    templateSettings.interpolate = /%{([\s\S]+?)}/g;
-    const compiled = template(translatedText);
-    return compiled(replacementObject);
   }
 }

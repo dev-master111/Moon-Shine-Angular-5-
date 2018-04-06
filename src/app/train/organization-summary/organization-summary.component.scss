@@ -1,0 +1,48 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+.organization-summary-component {
+  color: $body-text-color;
+
+  .train-organization-summary {
+    font-family: "proxima_novasemibold", Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: $body-text-color;
+    margin: 40px 0;
+  }
+
+  .tabs {
+    position: relative;
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+
+    .tab {
+      font-family: "proxima_novasemibold", Arial, sans-serif;
+      font-size: 16px;
+      color: $medium-gray;  
+      padding-bottom: 11px;
+      margin: 0 16px;
+  
+      &.active {
+        color: $medium-blue;  
+        border-bottom: solid 3px $medium-blue;
+      }
+    }
+
+    .three-dots {
+      position: absolute;
+      right: 18px;
+    }
+
+    .download-pdf {
+      font-family: "proxima_novamedium", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: $medium-blue;
+      width: 140px;
+      display: block;
+    }
+  }
+}

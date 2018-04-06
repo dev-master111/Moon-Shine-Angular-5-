@@ -1,0 +1,27 @@
+<div class="d-flex motives-component">
+  <div class="left-container col">
+    <div class="title-motives" l10nTranslate>navigation_motives</div>
+    <div class="member-count" l10nTranslate>
+      <span>{{ sdiMemberCount }}</span>
+      navigation_members
+    </div>
+    <div class="triangle">
+    </div>
+  </div>
+  <div class="right-container col">
+    <div class="title-impact" l10nTranslate>train_text_impact</div>
+    <div class="d-flex train-impact-member-stats">
+      <div>
+        {{ percentageValue }} <span>%</span>
+      </div>
+      <div
+        class="train-impact-member-stats-text"
+        [innerHtml]="commonService.translateTemplate('train_impact_member_stats', {sdiMemeberCount: sdiMemberCount, totalMemberCount: totalMemberCount})">
+      </div>
+    </div>
+    <div
+      class="train-impact-member-stats-text"
+      [innerHtml]="commonService.translateTemplate('train_sdi_pending_invites', {pendingSdiInvitationCount: pendingSdiInvitationCount})">
+    </div>
+  </div>  
+</div>

@@ -1,16 +1,9 @@
-
 @import '../../../mixins';
 @import '../../../variables';
 
 $train-very-dark-blue: #4a90e2;
 
 .overview-component {
-  font-family: "proxima_novaregular", Arial, sans-serif; 
-  font-size: $base-font-size;
-  line-height: normal;
-  color: $white;
-  width: 726px;
-
   .color {
     @include pspPersonalityColors;
   }
@@ -87,7 +80,7 @@ $train-very-dark-blue: #4a90e2;
     .middle-content-holder {
       .summary-section {
         .red-facilitator-banner {
-          background-image: url(/assets/images/train/Train_Card_Red_Ribbon.svg);
+          background-image: url(/assets/images/Train/Train_Card_Red_Ribbon.svg);
           background-size: cover;
           padding: 15px 9px 41px 10px;
 

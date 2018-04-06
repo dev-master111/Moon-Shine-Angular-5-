@@ -1,0 +1,28 @@
+import { Injectable } from '@angular/core';
+import { Language, TranslationService } from 'angular-l10n';
+import { template, templateSettings } from 'lodash';
+
+@Injectable()
+export class CommonService {
+  @Language() lang: string;
+
+  constructor(
+    private translationService: TranslationService
+  ) { }
+
+  // Translation Services
+  public translateTemplate(localizationKey: string, replacementObject: any): string {
+    const translatedText = this.replaceTranslationTemplate(
+      this.translationService.translate(localizationKey),
+      replacementObject
+    );
+
+    return translatedText;
+  }
+
+  public replaceTranslationTemplate(translatedText: string, replacementObject: any): string {
+    templateSettings.interpolate = /%{([\s\S]+?)}/g;
+    const compiled = template(translatedText);
+    return compiled(replacementObject);
+  }
+}

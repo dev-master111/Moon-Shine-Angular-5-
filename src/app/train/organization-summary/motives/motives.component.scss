@@ -1,0 +1,49 @@
+@import '../../../../mixins';
+@import '../../../../variables';
+
+@mixin title-style {
+  font-family: "proxima_novasemibold", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.motives-component {
+  color: $body-text-color;
+
+  .left-container {
+    .title-motives {
+      @include title-style;
+    }
+
+    .member-count {
+      font-size: 16px;
+      line-height: 1;
+      color: $very-dark-gray;
+    }
+
+    .triangle {
+      background-image: url('/assets/images/Triangles/1x/Motives - Triangle@1x.png');
+      background-size: auto 90%;
+      background-repeat: no-repeat;
+      height: 300px;
+    }
+  }
+
+  .right-container {
+    background-color: $almost-white;
+
+    .title-impact {
+      @include title-style;      
+    }
+
+    .train-impact-member-stats {
+      .train-impact-member-stats-text {
+        font-family: "proxima_novasemibold", Arial, sans-serif;
+      }
+    }
+
+    .train-impact-member-stats-text {
+      line-height: 1;
+    }
+  }
+}

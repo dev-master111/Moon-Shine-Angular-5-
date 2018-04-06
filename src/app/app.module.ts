@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // Third Party Localization Module
 import {
   L10nConfig,
@@ -33,10 +35,13 @@ const l10nConfig: L10nConfig = {
 
 import { AppRoutingModule } from './app-routing.module';
 
+import {
+  CommonService,
+  ColorizeMvsCsService
+} from './shared/services';
+
 // Pages/Components
 import { AppComponent } from './app.component';
-
-import { ColorizeMvsCsService } from './shared/services';
 
 @NgModule({
   declarations: [
@@ -48,9 +53,11 @@ import { ColorizeMvsCsService } from './shared/services';
     AppRoutingModule,
     HttpClientModule,
     LocalizationModule.forRoot(l10nConfig),
-    LocaleValidationModule.forRoot()
+    LocaleValidationModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [
+    CommonService,
     ColorizeMvsCsService
   ],
   bootstrap: [AppComponent]

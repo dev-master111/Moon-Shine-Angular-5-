@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClipboardModule } from 'ngx-clipboard';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 
@@ -41,6 +42,7 @@ const l10nConfig: L10nConfig = {
     ClipboardModule,
     LocalizationModule.forChild(l10nConfig),
     SimpleNotificationsModule.forRoot(),
+    NgbModule,
 
     ComponentsModule
   ],
@@ -49,6 +51,7 @@ const l10nConfig: L10nConfig = {
     LocaleValidationModule,
     ClipboardModule,
     SimpleNotificationsModule,
+    NgbModule,
 
     ComponentsModule
   ]

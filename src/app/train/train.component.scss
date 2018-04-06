@@ -2,7 +2,18 @@
 @import '../../variables';
 
 .train-page {
+  font-family: "proxima_novaregular", Arial, sans-serif; 
+  font-size: $base-font-size;
+  line-height: normal;
+  color: $white;
+  width: 768px;
+
   .overview-container {
-    padding: 40px 20px;
+    padding: 40px 21px;
+  }
+
+  .grey-divider {
+    height: 30px;
+    background-color: $very-dark-gray;
   }
 }

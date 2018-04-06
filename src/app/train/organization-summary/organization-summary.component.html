@@ -1,0 +1,50 @@
+<div class="organization-summary-component">
+  <div class="train-organization-summary" l10nTranslate>train_organization_summary</div>
+  
+  <div class="d-flex justify-content-center tabs">
+    <a
+      class="tab"
+      [class.active]="curTab === 'motives'" 
+      (click)="curTab = 'motives'" 
+      l10nTranslate>
+      navigation_motives
+    </a>
+    <a
+      class="tab"
+      [class.active]="curTab ==='conflict'" 
+      (click)="curTab = 'conflict'" 
+      l10nTranslate>
+      navigation_conflict
+    </a>
+    <a
+      class="tab"
+      [class.active]="curTab === 'strengths'" 
+      (click)="curTab = 'strengths'" 
+      l10nTranslate>
+      navigation_strengths
+    </a>
+    <a
+      class="three-dots"
+      [ngbPopover]="popContent"
+      [placement]="'bottom'">
+      <img src="assets/images/Icons/Settings Gray.svg"/>
+    </a>
+    <ng-template #popContent>
+      <a class="download-pdf" href="" download l10nTranslate>train_download_pdf_report</a>
+    </ng-template>
+  </div>
+
+  <div *ngIf="curTab === 'motives'" class="tab-motives">
+    <app-motives
+      [totalMemberCount]="9555"
+      [sdiMemberCount]="6754"
+      [pendingSdiInvitationCount]="742">
+    </app-motives>
+  </div>
+  <div *ngIf="curTab === 'conflict'" class="tab-conflict">
+    <app-conflict></app-conflict>
+  </div>
+  <div *ngIf="curTab === 'strengths'" class="tab-strenths">
+    <app-strengths></app-strengths>
+  </div>
+</div>
