@@ -282,19 +282,4 @@ span.right-tab {
   }
 }
 
-.popover.bs-popover-bottom {
-  top: 18px !important;
-  right: 6px;
-  left: unset !important;
 
-  .arrow {
-    right: 6px;
-    left: unset !important;
-  }
-
-  .popover-body {
-    background-color: $extra-light-gray;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-}

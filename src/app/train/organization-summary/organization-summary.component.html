@@ -30,12 +30,13 @@
       <img src="assets/images/Icons/Settings Gray.svg"/>
     </a>
     <ng-template #popContent>
-      <a class="download-pdf" href="" download l10nTranslate>train_download_pdf_report</a>
+      <a href="" download l10nTranslate>train_download_pdf_report</a>
     </ng-template>
   </div>
 
   <div *ngIf="curTab === 'motives'" class="tab-motives">
     <app-motives
+      [motives]="motives"
       [totalMemberCount]="9555"
       [sdiMemberCount]="6754"
       [pendingSdiInvitationCount]="742">

@@ -467,7 +467,7 @@
   "train_organization_summary": "Organization Summary",
   "train_text_impact": "Impact",
   "train_impact_member_stats": "%{sdiMemeberCount} of your %{totalMemberCount} members have completed the SDI 2.0",
-  "train_sdi_pending_invites": "<span>%{pendingSdiInvitationCount}</span> Pending SDI 2.0 Invitations",
+  "train_sdi_pending_invites": "<span class=\"medium-blue-color\">%{pendingSdiInvitationCount}</span> Pending SDI 2.0 Invitations",
   "train_management_team_title": "Management Team",
   "train_edit_management_team_sub_title": "Global Leadership",
   "train_management_team_text": "<p>Create your leadership team,</p><p>and learn to best relate for better results</p>",

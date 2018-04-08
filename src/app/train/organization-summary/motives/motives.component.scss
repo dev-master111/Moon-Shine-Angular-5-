@@ -4,6 +4,10 @@
 .motives-component {
   color: $body-text-color;
 
+  .medium-blue-color {
+    color: $medium-blue;
+  }
+
   .title {
     font-family: "proxima_novabold", Arial, sans-serif;
     font-size: 20px;
@@ -22,10 +26,107 @@
     padding: 30px 40px;
 
     .triangle {
+      position: relative;
       background-image: url('/assets/images/Triangles/1x/Motives - Triangle@1x.png');
       background-size: auto 85%;
       background-repeat: no-repeat;
       height: 300px;
+      letter-spacing: 0.8px;
+
+      .people-label {
+        position: absolute;
+        top: -15px;
+        color: $psp-blue;
+      }
+
+      .process-label {
+        position: absolute;
+        left: 85px;
+        top: 220px;
+        transform: rotate(60deg);
+        color: $psp-green;
+      }
+
+      .performance-label {
+        position: absolute;
+        left: 224px;
+        top: 43px;
+        transform: rotate(-60deg);
+        color: $psp-red;
+      }
+
+      .percent-numbers {
+        position: relative;
+        font-family: "proxima_novamedium", Arial, sans-serif;
+        font-size: 30px;
+        letter-spacing: -1px;
+        color: $black;
+
+        div {
+          position: absolute;
+
+          span {
+            font-size: 16px;
+            margin-left: -4px;
+          }
+
+          &:nth-child(1) {
+            top: 11px;
+            left: 55px;
+          }
+  
+          &:nth-child(2) {
+            top: 11px;
+            left: 205px;
+          }
+  
+          &:nth-child(3) {
+            top: 154px;
+            left: 132px;
+          }
+  
+          &:nth-child(4) {
+            top: 70px;
+            left: 132px;
+            font-size: 20px;
+          }
+  
+          &:nth-child(5) {
+            top: 93px;
+            left: 78px;
+          }
+  
+          &:nth-child(6) {
+            top: 93px;
+            left: 176px;
+          }
+  
+          &:nth-child(7) {
+            top: 11px;
+            left: 132px;
+          }
+        }
+      }
+
+      .legend {
+        position: absolute;
+        right: -32px;
+        bottom: 10px;
+        line-height: 1.2;
+
+        .color {
+          @include pspPersonalityColors;
+        }    
+
+        .legend-left {
+          margin-right: 11px;
+          color: $very-dark-gray;
+        }
+
+        .legend-right {
+          font-family: "proxima_novasemibold", Arial, sans-serif;
+        }
+      }
     }
   }
 
@@ -35,8 +136,28 @@
     padding: 30px 40px;
 
     .train-impact-member-stats {
+      #chartdiv {
+        width		: 400px;
+        height	: 200px;
+
+        .amcharts-main-div {
+          .amcharts-chart-div {
+            a {
+              display: none !important;
+            }
+            .amcharts-label:first-child {
+              font-family: "proxima_novaregular", Arial, sans-serif;
+            }
+            .amcharts-label:last-child {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
       .train-impact-member-stats-text {
         font-family: "proxima_novasemibold", Arial, sans-serif;
+        line-height: 1.2;
       }
     }
 

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClipboardModule } from 'ngx-clipboard';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import { AmChartsModule } from '@amcharts/amcharts3-angular';
 
 import { ComponentsModule } from './components/components.module';
 
@@ -43,6 +44,7 @@ const l10nConfig: L10nConfig = {
     LocalizationModule.forChild(l10nConfig),
     SimpleNotificationsModule.forRoot(),
     NgbModule,
+    AmChartsModule,
 
     ComponentsModule
   ],
@@ -52,6 +54,7 @@ const l10nConfig: L10nConfig = {
     ClipboardModule,
     SimpleNotificationsModule,
     NgbModule,
+    AmChartsModule,
 
     ComponentsModule
   ]

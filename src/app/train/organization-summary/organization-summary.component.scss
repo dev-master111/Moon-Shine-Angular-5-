@@ -37,13 +37,30 @@
       right: 18px;
     }
 
-    .download-pdf {
-      font-family: "proxima_novamedium", Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: $medium-blue;
-      width: 140px;
-      display: block;
+    .popover.bs-popover-bottom {
+      top: 18px !important;
+      right: 6px;
+      left: unset !important;
+    
+      .arrow {
+        right: 6px;
+        left: unset !important;
+      }
+    
+      .popover-body {
+        background-color: $extra-light-gray;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        a {
+          font-family: "proxima_novamedium", Arial, sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          color: $medium-blue;
+          width: 140px;
+          display: block;
+        }
+      }
     }
   }
 }
