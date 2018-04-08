@@ -42,9 +42,12 @@
     </app-motives>
   </div>
   <div *ngIf="curTab === 'conflict'" class="tab-conflict">
-    <app-conflict></app-conflict>
+    <app-conflict
+      [leftMemberCount]="6754"
+      [rightMemberCount]="6754">
+    </app-conflict>
   </div>
   <div *ngIf="curTab === 'strengths'" class="tab-strenths">
-    <app-strengths></app-strengths>
+    <app-strengths [memberCount]="6754"></app-strengths>
   </div>
 </div>

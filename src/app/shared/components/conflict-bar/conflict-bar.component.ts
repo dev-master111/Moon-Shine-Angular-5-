@@ -2,6 +2,8 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { ColorizeMvsCsService } from '../../services/colorize-mvs-cs.service';
 
+import { ConflictBar } from '../../models';
+
 @Component({
   selector: 'app-conflict-bar',
   templateUrl: './conflict-bar.component.html',
@@ -9,9 +11,7 @@ import { ColorizeMvsCsService } from '../../services/colorize-mvs-cs.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ConflictBarComponent implements OnInit {
-  @Input() barColor;
-  @Input() text;
-  @Input() percentage;
+  @Input() conflictBar: ConflictBar;
 
   constructor(
     private colorizeMvsCsService: ColorizeMvsCsService

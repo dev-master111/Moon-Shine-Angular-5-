@@ -1,0 +1,48 @@
+@import '../../../../mixins';
+@import '../../../../variables';
+
+.conflict-component {
+  .title {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .member-count {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .left-container {
+    width: 50%;
+    padding: 30px 37px;
+
+    .conflict-bar {
+      margin-bottom: 15px;
+    }
+  }
+
+  .right-container {
+    width: 50%;
+    background-color: $almost-white;
+    padding: 30px 33px;
+
+    .conflict-sequence {
+      width: 50%;
+    
+      .mixed-text {
+        font-family: "proxima_novasemibold", Arial, sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-right: 15px;
+      }
+
+      .percentage {
+        font-size: 20px;
+        line-height: 1.5;
+        color: $very-dark-gray;
+      }
+    }
+  }
+}

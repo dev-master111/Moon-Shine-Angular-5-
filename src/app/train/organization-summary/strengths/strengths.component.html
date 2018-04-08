@@ -1,3 +1,23 @@
-<p>
-  strengths works!
-</p>
+<div class="strengths-component">
+  <div class="title" l10nTranslate>train_exxonmobil_strengths_portrait_title</div>    
+  <div
+    class="member-count"
+    [innerHtml]="commonService.translateTemplate('train_conflict_member_count_text', {count: memberCount})">
+  </div>
+  <div class="text-uppercase d-flex flex-column toggle-buttons">
+    <a
+      class="toggle-button"
+      [class.active]="curTab === 'strengths'" 
+      (click)="curTab = 'strengths'" 
+      l10nTranslate>
+      discover_sections_reasons_strengths_tab_name
+    </a>
+    <a
+      class="toggle-button"
+      [class.active]="curTab ==='overdone'" 
+      (click)="curTab = 'overdone'" 
+      l10nTranslate>
+      discover_sections_strengths_overdone_strengths_tab_name
+    </a>
+  </div>
+</div>

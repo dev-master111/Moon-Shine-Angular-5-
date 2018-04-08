@@ -97,7 +97,7 @@ button {
   padding: $base-top-bottom-spacing $base-side-padding;
 }
 
-strong {
+strong, .font-weight-bold {
   font-family: "proxima_novabold", Arial, sans-serif;
   font-weight: normal;
 }

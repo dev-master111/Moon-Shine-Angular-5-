@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Language, TranslationService } from 'angular-l10n';
 
-import { User } from '../shared/model';
+import { User } from '../shared/models';
 
 @Component({
   selector: 'app-train',

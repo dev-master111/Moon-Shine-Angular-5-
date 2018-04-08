@@ -1,3 +1,29 @@
-<p>
-  conflict works!
-</p>
+<div class="d-flex conflict-component">
+  <div class="left-container">
+    <div class="title" l10nTranslate>train_stage_1_conflict_title</div>    
+    <div
+      class="member-count"
+      [innerHtml]="commonService.translateTemplate('train_conflict_member_count_text', {count: leftMemberCount})">
+    </div>
+    <div
+      class="conflict-bar"
+      *ngFor="let conflictBar of conflictBars">
+      <app-conflict-bar [conflictBar]="conflictBar"></app-conflict-bar>
+    </div>
+  </div>
+  <div class="right-container">
+    <div class="title" l10nTranslate>train_conflict_sequences_title</div>    
+    <div
+      class="member-count"
+      [innerHtml]="commonService.translateTemplate('train_conflict_member_count_text', {count: rightMemberCount})">
+    </div>
+    <div class="d-flex flex-wrap">
+      <div
+        class="text-left conflict-sequence"
+        *ngFor="let conflictSequence of conflictSequences">
+        <span class="mixed-text" [innerHtml]="colorizeMvsCsService.conflictSequenceHtml(conflictSequence.mixedText)"></span>
+        <span class="percentage">{{ conflictSequence.percentage }}%</span>
+      </div>
+    </div>
+  </div>
+</div>

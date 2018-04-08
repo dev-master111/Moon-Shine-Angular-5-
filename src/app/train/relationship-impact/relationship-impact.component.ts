@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { CommonService } from '../../shared/services';
+
 @Component({
   selector: 'app-relationship-impact',
   templateUrl: './relationship-impact.component.html',
@@ -14,20 +16,17 @@ export class RelationshipImpactComponent implements OnInit {
   @Input() roleExpectationNumber;
   @Input() roleExpectationPendingNumber;
 
-  constructor() { }
+  constructor(
+    private commonService: CommonService
+  ) { }
 
   ngOnInit() {
-    this.relationshipImpacts = this.numberWithCommas(this.relationshipImpacts);
-    this.sdiCompletedNumber = this.numberWithCommas(this.sdiCompletedNumber);
-    this.sdiPendingNumber = this.numberWithCommas(this.sdiPendingNumber);
-    this.feedbackCompletedNumber = this.numberWithCommas(this.relationshipImpacts);
-    this.feedbackPendingNumber = this.numberWithCommas(this.feedbackPendingNumber);
-    this.roleExpectationNumber = this.numberWithCommas(this.roleExpectationNumber);
-    this.roleExpectationPendingNumber = this.numberWithCommas(this.roleExpectationPendingNumber);
+    this.relationshipImpacts = this.commonService.numberWithCommas(this.relationshipImpacts);
+    this.sdiCompletedNumber = this.commonService.numberWithCommas(this.sdiCompletedNumber);
+    this.sdiPendingNumber = this.commonService.numberWithCommas(this.sdiPendingNumber);
+    this.feedbackCompletedNumber = this.commonService.numberWithCommas(this.relationshipImpacts);
+    this.feedbackPendingNumber = this.commonService.numberWithCommas(this.feedbackPendingNumber);
+    this.roleExpectationNumber = this.commonService.numberWithCommas(this.roleExpectationNumber);
+    this.roleExpectationPendingNumber = this.commonService.numberWithCommas(this.roleExpectationPendingNumber);
   }
-
-  numberWithCommas(num: number) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-
 }

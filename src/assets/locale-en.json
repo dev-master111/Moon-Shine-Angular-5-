@@ -477,5 +477,9 @@
   "train_text_pending": "Pending",
   "train_360_feedback": "360º Feedback",
   "train_role_expectations": "Role Expectations",
-  "train_download_pdf_report": "Download PDF Report"
+  "train_download_pdf_report": "Download PDF Report",
+  "train_stage_1_conflict_title": "Stage 1 Conflict",
+  "train_conflict_sequences_title": "Conflict Sequences",
+  "train_conflict_member_count_text": "%{count} members",
+  "train_exxonmobil_strengths_portrait_title": "ExxonMobil Strengths Portrait"
 }

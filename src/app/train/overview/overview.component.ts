@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { NotificationsService } from 'angular2-notifications';
 
-import { User } from '../../shared/model';
+import { User } from '../../shared/models';
 import { ColorizeMvsCsService } from '../../shared/services';
 
 @Component({

@@ -155,20 +155,52 @@ $browser-context: 14;
     background-color: $psp-hub;
   }
 
-  &.red-green {
+  &.red-green-gradient {
     background: linear-gradient(104deg, $psp-red, $psp-green);
   }
 
-  &.red-blue {
+  &.green-red-gradient {
+    background: linear-gradient(104deg, $psp-green, $psp-red);
+  }
+
+  &.red-blue-gradient {
     background: linear-gradient(286deg, $psp-red, $psp-blue);
   }
 
-  &.blue-green {
+  &.blue-red-gradient {
+    background: linear-gradient(286deg, $psp-blue, $psp-red);
+  }
+
+  &.blue-green-gradient {
     background: linear-gradient(117deg, $psp-blue, $psp-green);
   }
 
-  &.red-blue-green {
+  &.green-blue-gradient {
+    background: linear-gradient(117deg, $psp-green, $psp-blue);
+  }
+
+  &.red-blue-green-gradient {
+    background: linear-gradient(110deg, $psp-red, $psp-blue 54%, $psp-green);
+  }
+
+  &.red-green-blue-gradient {
+    background: linear-gradient(110deg, $psp-red, $psp-green 54%, $psp-blue);
+  }
+
+  &.blue-red-green-gradient {
     background: linear-gradient(110deg, $psp-blue, $psp-red 54%, $psp-green);
+  }
+
+  &.blue-green-red-gradient {
+    background: linear-gradient(110deg, $psp-blue, $psp-green 54%, $psp-red);
+  }
+
+  &.green-blue-red-gradient {
+    background: linear-gradient(110deg, $psp-green, $psp-blue 54%, $psp-red);
+  }
+
+  &.green-red-blue-gradient {
+    background: linear-gradient(110deg, $psp-green, $psp-red 54%, $psp-blue);
   }
 }
 

@@ -1,8 +1,8 @@
 <div class="d-flex">
-  <div [class]="'d-flex align-items-center justify-content-center percentage ' + barColor">{{ percentage }}%</div>
-  <div class="detail">
-    <div [class]="'top-bar ' + barColor" [ngStyle]="{ 'width.%': percentage }"></div>
-    <div *ngIf="!text.includes('[')" [class]="'text ' + barColor">{{ text }}</div>
-    <div *ngIf="text.includes('[')" [innerHtml]="colorizeMvsCsService.conflictSequenceHtmlForConflictBarOnly(text)"></div>
+  <div [class]="'d-flex align-items-center justify-content-center percentage ' + conflictBar.barColor">{{ conflictBar.percentage }}%</div>
+  <div class="detail text-left">
+    <div [class]="'top-bar ' + conflictBar.barColor" [ngStyle]="{ 'width.%': conflictBar.percentage }"></div>
+    <div *ngIf="!conflictBar.mixedText.includes('[')" [class]="'text ' + conflictBar.barColor">{{ conflictBar.mixedText }}</div>
+    <div *ngIf="conflictBar.mixedText.includes('[')" [innerHtml]="colorizeMvsCsService.conflictSequenceHtmlForConflictBarOnly(conflictBar.mixedText)"></div>
   </div>
 </div>

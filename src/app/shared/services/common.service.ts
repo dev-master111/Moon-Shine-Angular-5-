@@ -10,6 +10,10 @@ export class CommonService {
     private translationService: TranslationService
   ) { }
 
+  public numberWithCommas(num: number): string {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
   // Translation Services
   public translateTemplate(localizationKey: string, replacementObject: any): string {
     const translatedText = this.replaceTranslationTemplate(

@@ -22,10 +22,12 @@ $conflict-bar-base-height: 31px;
 }
 
 .detail {
-  width: $conflict-bar-base-width;
+  flex: 1;
+  // width: $conflict-bar-base-width;
 
   .top-bar {
     height: $conflict-bar-base-height*0.58;
+    margin-bottom: 2px;
 
     @include pspBackgroundPersonalityColors;
   }

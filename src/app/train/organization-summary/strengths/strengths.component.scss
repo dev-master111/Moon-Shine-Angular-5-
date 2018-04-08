@@ -1,0 +1,42 @@
+@import '../../../../mixins';
+@import '../../../../variables';
+
+.strengths-component {
+  background-image: linear-gradient(to bottom, rgba(248, 248, 248, 0.51), #c5c8c9);  position: relative;
+  height: 716px;
+
+  .title {
+    font-family: "proxima_novabold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 46px;
+    margin-bottom: 8px;
+  }
+
+  .member-count {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .toggle-buttons {
+    position: absolute;
+    left: 50px;
+    top: 80px;
+    cursor: pointer;
+
+    .toggle-button {
+      font-family: "proxima_novamedium", Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      border-radius: 3px;
+      color: $white;
+      background-color: $medium-gray;
+      padding: 5px 10px;
+      margin-bottom: 5px;
+  
+      &.active {
+        background-color: $black;
+      }
+    }  
+  }
+}
