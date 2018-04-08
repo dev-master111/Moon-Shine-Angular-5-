@@ -5,12 +5,12 @@
   color: $body-text-color;
 
   .train-organization-summary {
-    font-family: "proxima_novasemibold", Arial, sans-serif;
+    font-family: "proxima_novabold", Arial, sans-serif;
     font-size: 30px;
     line-height: 1;
     letter-spacing: -0.5px;
     color: $body-text-color;
-    margin: 40px 0;
+    margin-bottom: 42px;
   }
 
   .tabs {
@@ -20,7 +20,7 @@
 
     .tab {
       width: 70px;
-      font-family: "proxima_novasemibold", Arial, sans-serif;
+      font-family: "proxima_novabold", Arial, sans-serif;
       font-size: 16px;
       color: $medium-gray;  
       padding-bottom: 11px;

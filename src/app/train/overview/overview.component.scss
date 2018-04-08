@@ -31,8 +31,9 @@ $train-very-dark-blue: #4a90e2;
     background-color: $medium-blue;
     
     .text-train-title {
-      padding: 13px 20px;
+      font-family: "proxima_novabold", Arial, sans-serif;
       font-size: 20px;
+      padding: 13px 20px;
     }
   }
 
@@ -82,10 +83,10 @@ $train-very-dark-blue: #4a90e2;
         .red-facilitator-banner {
           background-image: url(/assets/images/Train/Train_Card_Red_Ribbon.svg);
           background-size: cover;
-          padding: 15px 9px 41px 10px;
+          padding: 15px 9px 45px 10px;
 
           .text-premier {
-            font-family: "proxima_novasemibold", Arial, sans-serif;
+            font-family: "proxima_novabold", Arial, sans-serif;
             letter-spacing: 4.7px;        
           }
 
@@ -106,7 +107,8 @@ $train-very-dark-blue: #4a90e2;
         }
 
         .text-facilitator-id {
-          font-family: "proxima_novasemibold", Arial, sans-serif;
+          font-family: "proxima_novabold", Arial, sans-serif;
+          font-size: 12px;
           letter-spacing: 0.7px;
           color: $medium-gray;
 
@@ -121,13 +123,14 @@ $train-very-dark-blue: #4a90e2;
         color: $very-dark-gray;
 
         .text-facilitator-rating {
-          font-family: "proxima_novasemibold", Arial, sans-serif;
+          font-family: "proxima_novabold", Arial, sans-serif;
         }
 
         .facilitator-rating {
           margin-top: 35px;
   
           .facilitator-rating-score {
+            font-family: "proxima_novaregular", Arial, sans-serif; 
             font-size: 48px;
             color: $train-very-dark-blue;
           }
@@ -140,10 +143,10 @@ $train-very-dark-blue: #4a90e2;
       }
 
       .trained-section {
-        padding: 20px 50px 34px 18px;
+        padding: 20px 47px 34px 18px;
 
         .text-trained {
-          font-family: "proxima_novasemibold", Arial, sans-serif;
+          font-family: "proxima_novabold", Arial, sans-serif;
           color: $very-dark-gray;
         }
       }
@@ -154,7 +157,7 @@ $train-very-dark-blue: #4a90e2;
       border-left: solid 2px $border-gray;
 
       .text-available {
-        font-family: "proxima_novasemibold", Arial, sans-serif;
+        font-family: "proxima_novabold", Arial, sans-serif;
         color: $very-dark-gray;
       }
     }
@@ -174,14 +177,16 @@ $train-very-dark-blue: #4a90e2;
       padding: 10px 26px 10px 16px;
 
       .text-platform-key {
+        font-family: "proxima_novabold", Arial, sans-serif;
         letter-spacing: 0.6px;
         padding-bottom: 3px;
+        color: #eeeeee;
       }
 
       .platform-key {
         width: 260px;
         padding: 8px;
-        margin-right: 28px;
+        margin-right: 29px;
         background-color: $black;
       }
 
@@ -198,6 +203,7 @@ $train-very-dark-blue: #4a90e2;
     }
 
     .text-transactions {
+      font-family: "proxima_novabold", Arial, sans-serif;
       font-size: 12px;
       line-height: 1;
       letter-spacing: 1.3px;

@@ -10,7 +10,7 @@ $conflict-bar-base-height: 31px;
 }
 
 .percentage {
-  font-family: "proxima_novaregular", Arial, sans-serif; 
+  font-family: "proxima_novamedium", Arial, sans-serif; 
   font-size: $base-font-size;
   line-height: normal;
   color: $white;
@@ -34,5 +34,6 @@ $conflict-bar-base-height: 31px;
 
   .text {
     @include pspPersonalityColors;
+    letter-spacing: 0.6px;
   }
 }
