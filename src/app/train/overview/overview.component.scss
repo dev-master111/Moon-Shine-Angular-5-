@@ -2,6 +2,8 @@
 @import '../../../variables';
 
 $train-very-dark-blue: #4a90e2;
+$left-panel-width: 171px;
+$right-panel-width: 140px;
 
 .overview-component {
   .color {
@@ -40,6 +42,7 @@ $train-very-dark-blue: #4a90e2;
   .inner-content {
     .left-content-holder {
       background-color: $almost-white;
+      width: $left-panel-width;
       padding: 29px 35px 11px 32px;
 
       .user-avatar {
@@ -79,6 +82,8 @@ $train-very-dark-blue: #4a90e2;
     }
 
     .middle-content-holder {
+      flex: 1;
+      
       .summary-section {
         .red-facilitator-banner {
           background-image: url(/assets/images/Train/Train_Card_Red_Ribbon.svg);
@@ -153,6 +158,7 @@ $train-very-dark-blue: #4a90e2;
     }
 
     .right-content-holder {
+      width: $right-panel-width;
       padding: 20px 33px 34px;
       border-left: solid 2px $border-gray;
 
@@ -167,12 +173,14 @@ $train-very-dark-blue: #4a90e2;
     background-color: $body-text-color;
 
     .re-gen-div {
+      width: $left-panel-width;
       padding-left: 46px;
       padding-right: 46px;
       border-right: solid 2px $black;
     }
 
     .platform-key-div {
+      flex: 1;
       font-size: 10px;
       padding: 10px 26px 10px 16px;
 
@@ -184,8 +192,7 @@ $train-very-dark-blue: #4a90e2;
       }
 
       .platform-key {
-        width: 260px;
-        padding: 8px;
+        padding: 8px 60px 8px 8px;
         margin-right: 29px;
         background-color: $black;
       }
@@ -202,15 +209,19 @@ $train-very-dark-blue: #4a90e2;
       }
     }
 
-    .text-transactions {
-      font-family: "proxima_novabold", Arial, sans-serif;
-      font-size: 12px;
-      line-height: 1;
-      letter-spacing: 1.3px;
+    .text-transactions-div {
+      width: $right-panel-width;
       padding-left: 15px;
       padding-right: 15px;
       border-left: solid 2px $black;
-      color: $white;
+
+      .text-transactions {
+        font-family: "proxima_novabold", Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 1.3px;
+        color: $white;
+      }
     }
   }
 }
