@@ -18,6 +18,12 @@ export class ConflictBarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // Initialize input data
+    this.conflictBar = this.conflictBar || {
+      barColor: '',
+      mixedText: '',
+      percentage: 0
+    };
   }
 
 }

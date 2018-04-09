@@ -23,7 +23,24 @@ export class OverviewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    // Initialize input data
+    this.user = this.user || {
+      avatar: '',
+      name: '',
+      jobTitle: '',
+      motives: '',
+      conflict: '',
+      sdiDate: new Date(),
+      facilitatorBanner: '',
+      facilitatorID: '',
+      facilitatorRatingScore: 0,
+      evaluationsScore: 0,
+      classesNumber: 0,
+      learnersNumber: 0,
+      toolkitsNumber: 0,
+      creditsNumber: 0,
+      platformKey: '',
+    };
   }
 
   getGraphURL() {

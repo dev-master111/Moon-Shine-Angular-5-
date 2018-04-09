@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConflictBarComponent } from './conflict-bar.component';
+import { ColorizeMvsCsService } from '../../services/colorize-mvs-cs.service';
 
 describe('ConflictBarComponent', () => {
   let component: ConflictBarComponent;
@@ -8,7 +9,8 @@ describe('ConflictBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConflictBarComponent ]
+      declarations: [ ConflictBarComponent ],
+      providers: [ ColorizeMvsCsService ]
     })
     .compileComponents();
   }));

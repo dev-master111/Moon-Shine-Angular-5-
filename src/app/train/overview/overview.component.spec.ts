@@ -60,4 +60,9 @@ describe('OverviewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('#getGraphURL should return assets/images/Icons/Graph - 5.svg', () => {
+    component.user.facilitatorRatingScore = 4.5;
+    expect(component.getGraphURL()).toEqual('assets/images/Icons/Graph - 5.svg');
+  });
 });

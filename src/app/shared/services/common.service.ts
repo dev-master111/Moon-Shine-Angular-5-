@@ -11,7 +11,7 @@ export class CommonService {
   ) { }
 
   public numberWithCommas(num: number): string {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return String(num).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
   // Translation Services

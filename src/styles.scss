@@ -282,4 +282,53 @@ span.right-tab {
   }
 }
 
+/******************************************************************/
+/* Train Page Global Styles
+/******************************************************************/
+.flex-1 {
+  flex: 1;
+}
 
+.font-proxima-bold {
+  font-family: "proxima_novabold", Arial, sans-serif;
+}
+
+.font-proxima-semibold {
+  font-family: "proxima_novasemibold", Arial, sans-serif;
+}
+
+.font-proxima-medium {
+  font-family: "proxima_novamedium", Arial, sans-serif;
+}
+
+.font-proxima-regular {
+  font-family: "proxima_novaregular", Arial, sans-serif;
+}
+
+.color-very-dark-grey {
+  color: $very-dark-gray;
+}
+
+.color-body-text-color {
+  color: $body-text-color;
+}
+
+.color-medium-grey {
+  color: $medium-gray;
+}
+
+.font-size-10 {
+  font-size: 10px;
+}
+
+.font-size-12 {
+  font-size: 10px;
+}
+
+.font-size-16 {
+  font-size: 10px;
+}
+
+.font-size-20 {
+  font-size: 10px;
+}

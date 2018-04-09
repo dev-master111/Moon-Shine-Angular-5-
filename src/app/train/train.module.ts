@@ -18,6 +18,12 @@ import { EditManagementTeamComponent } from './edit-management-team/edit-managem
     TrainRoutingModule,
     OrganizationSummaryModule
   ],
-  declarations: [TrainComponent, OverviewComponent, CreateManagementTeamComponent, RelationshipImpactComponent, EditManagementTeamComponent]
+  declarations: [
+    TrainComponent,
+    OverviewComponent,
+    CreateManagementTeamComponent,
+    RelationshipImpactComponent,
+    EditManagementTeamComponent
+  ]
 })
 export class TrainModule { }

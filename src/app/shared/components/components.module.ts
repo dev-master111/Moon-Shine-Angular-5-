@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-// Third Party Localization Module
 import {
   L10nConfig,
   L10nLoader,
@@ -36,7 +34,7 @@ import { ConflictBarComponent } from './conflict-bar/conflict-bar.component';
 @NgModule({
   imports: [
     CommonModule,
-    LocalizationModule.forChild(l10nConfig),
+    LocalizationModule.forRoot(l10nConfig)
   ],
   exports: [
     LocalizationModule,

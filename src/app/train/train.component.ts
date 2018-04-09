@@ -17,13 +17,13 @@ export class TrainComponent implements OnInit {
 
   ngOnInit() {
     this.user = {
-      avatar: 'assets/images/Icon_SusanAnderson@3x.png',
+      avatar: 'assets/images/Teams/Icon_SusanAnderson@3x.png',
       name: 'Susan Anderson',
       jobTitle: 'Director of HR',
       motives: 'HUB',
       conflict: '[BR]-G',
       sdiDate: new Date('18 April 2017'),
-      facilitatorBanner: 'string',
+      facilitatorBanner: '',
       facilitatorID: 'US12247',
       facilitatorRatingScore: 4.67,
       evaluationsScore: 346,

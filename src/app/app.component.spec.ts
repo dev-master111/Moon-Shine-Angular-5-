@@ -1,6 +1,39 @@
-import { TestBed, async,  } from '@angular/core/testing';
+import { TestBed, async  } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+// Third Party Localization Module
+import {
+  L10nConfig,
+  L10nLoader,
+  LocalizationModule,
+  LocaleValidationModule,
+  StorageStrategy,
+  ProviderType
+} from 'angular-l10n';
+const l10nConfig: L10nConfig = {
+  locale: {
+    languages: [
+      { code: 'en', dir: 'ltr' }
+    ],
+    defaultLocale: { languageCode: 'en', countryCode: 'US' },
+    currency: 'USD',
+    storage: StorageStrategy.Cookie
+  },
+  translation: {
+    providers: [
+      { type: ProviderType.Static, prefix: '/assets/locale-' }
+    ],
+    caching: true,
+    missingValue: 'No key',
+    composedKeySeparator: '.',
+    i18nPlural: true
+  }
+};
+import {
+  CommonService,
+  ColorizeMvsCsService
+} from './shared/services';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +42,14 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule,
+        LocalizationModule.forRoot(l10nConfig),
+        LocaleValidationModule.forRoot()
+      ],
+      providers: [
+        CommonService,
+        ColorizeMvsCsService
       ]
     }).compileComponents();
   }));

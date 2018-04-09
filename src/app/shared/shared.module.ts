@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClipboardModule } from 'ngx-clipboard';
@@ -40,15 +41,17 @@ const l10nConfig: L10nConfig = {
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     ClipboardModule,
-    LocalizationModule.forChild(l10nConfig),
+    LocalizationModule.forRoot(l10nConfig),
     SimpleNotificationsModule.forRoot(),
-    NgbModule,
+    NgbModule.forRoot(),
     AmChartsModule,
 
     ComponentsModule
   ],
   exports: [
+    HttpClientModule,
     LocalizationModule,
     LocaleValidationModule,
     ClipboardModule,

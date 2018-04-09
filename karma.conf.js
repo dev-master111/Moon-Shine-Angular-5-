@@ -22,6 +22,14 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
+    crossOriginAttribute: false,
+    files: [
+      'https://www.amcharts.com/lib/3/amcharts.js',
+      'https://www.amcharts.com/lib/3/pie.js',
+      'https://www.amcharts.com/lib/3/serial.js',
+      'https://www.amcharts.com/lib/3/themes/light.js',
+      'https://www.amcharts.com/lib/3/themes/none.js'
+    ],
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,

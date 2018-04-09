@@ -22,4 +22,9 @@ describe('IconButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('#onClick should work', () => {
+    component.onclick.subscribe((selectedEvent) => expect(selectedEvent).toBe('Button Clicked!'));
+    component.onClick('Button Clicked!');
+  });
 });
