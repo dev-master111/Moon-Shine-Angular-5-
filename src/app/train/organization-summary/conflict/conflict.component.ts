@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { CommonService, ColorizeMvsCsService } from '../../../shared/services';
 
@@ -7,7 +7,8 @@ import { ConflictBar, ConflictSequence } from '../../../shared/models';
 @Component({
   selector: 'app-conflict',
   templateUrl: './conflict.component.html',
-  styleUrls: ['./conflict.component.scss']
+  styleUrls: ['./conflict.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ConflictComponent implements OnInit {
   @Input() leftMemberCount;
@@ -20,7 +21,7 @@ export class ConflictComponent implements OnInit {
     private colorizeMvsCsService: ColorizeMvsCsService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.leftMemberCount = this.commonService.numberWithCommas(this.leftMemberCount);
     this.rightMemberCount = this.commonService.numberWithCommas(this.rightMemberCount);
     this.conflictBars = [

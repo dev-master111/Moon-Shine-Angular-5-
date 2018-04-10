@@ -15,21 +15,31 @@ export class MotivesComponent implements OnInit, AfterViewInit {
   @Input() totalMemberCount;
   @Input() sdiMemberCount;
   @Input() pendingSdiInvitationCount;
-  percentageValue: number;
-  private chart: AmChart;
+  impactChartPercentageValue: number;
+  private pieChart: AmChart;
 
   constructor(
-    private AmCharts: AmChartsService,
+    private amChartService: AmChartsService,
     private commonService: CommonService,
     private colorizeMvsCsService: ColorizeMvsCsService
   ) { }
 
-  ngOnInit() {
-    this.percentageValue = Math.round(this.sdiMemberCount * 100 / this.totalMemberCount);
+  public ngOnInit() {
+    this.impactChartPercentageValue = Math.round(this.sdiMemberCount * 100 / this.totalMemberCount);
   }
 
-  ngAfterViewInit() {
-    this.chart = this.AmCharts.makeChart('chartdiv', {
+  public ngAfterViewInit() {
+    /**
+     * @param titleField Determine the key name of the title field of dataProvider
+     * @param valueField Determine the key name of the value field of dataProvider
+     * @param colors Define colors of every pieces of chart
+     * @param labelEnabled If true, show up labels when hovered
+     * @param radius Define chart radius in percentage
+     * @param innerRadius Define inner chart radius in percentage
+     * For more information about dataProvider, addClassNames, and allLabels,
+     * please visit https://docs.amcharts.com/3/javascriptcharts/AmChart
+     */
+    this.pieChart = this.amChartService.makeChart('chartdiv', {
       type: 'pie',
       theme: 'none',
       dataProvider: [ {
@@ -41,16 +51,16 @@ export class MotivesComponent implements OnInit, AfterViewInit {
       } ],
       titleField: 'title',
       valueField: 'value',
-      labelsEnabled: false,
-      fontSize: 9,
       colors: ['#90d1ff', '#e1e8ee'],
-      addClassNames: true,
+      labelsEnabled: false,
       labelRadius: 5,
+      fontSize: 9,
+      addClassNames: true,
       allLabels: [{
         y: '30%',
         align: 'center',
         size: 60,
-        text: this.percentageValue,
+        text: this.impactChartPercentageValue,
         color: '#000'
       }, {
         x: '-25%',

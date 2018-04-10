@@ -4,22 +4,22 @@
   <div class="d-flex justify-content-center tabs">
     <a
       class="tab"
-      [class.active]="curTab === 'motives'" 
-      (click)="curTab = 'motives'" 
+      [class.active]="selectedTab === 'motives'" 
+      (click)="selectedTab = 'motives'" 
       l10nTranslate>
       navigation_motives
     </a>
     <a
       class="tab"
-      [class.active]="curTab ==='conflict'" 
-      (click)="curTab = 'conflict'" 
+      [class.active]="selectedTab ==='conflict'" 
+      (click)="selectedTab = 'conflict'" 
       l10nTranslate>
       navigation_conflict
     </a>
     <a
       class="tab"
-      [class.active]="curTab === 'strengths'" 
-      (click)="curTab = 'strengths'" 
+      [class.active]="selectedTab === 'strengths'" 
+      (click)="selectedTab = 'strengths'" 
       l10nTranslate>
       navigation_strengths
     </a>
@@ -27,14 +27,14 @@
       class="three-dots"
       [ngbPopover]="popContent"
       [placement]="'bottom'">
-      <img src="assets/images/Icons/Settings Gray.svg"/>
+      <img src="assets/images/icons/settings-gray.svg"/>
     </a>
     <ng-template #popContent>
-      <a href="" download l10nTranslate>train_download_pdf_report</a>
+      <a (click)="downloadPdfReport()" download l10nTranslate>train_download_pdf_report</a>
     </ng-template>
   </div>
 
-  <div *ngIf="curTab === 'motives'" class="tab-motives">
+  <div *ngIf="selectedTab === 'motives'">
     <app-motives
       [motives]="motives"
       [totalMemberCount]="9555"
@@ -42,13 +42,13 @@
       [pendingSdiInvitationCount]="742">
     </app-motives>
   </div>
-  <div *ngIf="curTab === 'conflict'" class="tab-conflict">
+  <div *ngIf="selectedTab === 'conflict'">
     <app-conflict
       [leftMemberCount]="6754"
       [rightMemberCount]="6754">
     </app-conflict>
   </div>
-  <div *ngIf="curTab === 'strengths'" class="tab-strenths">
+  <div *ngIf="selectedTab === 'strengths'">
     <app-strengths [memberCount]="6754"></app-strengths>
   </div>
 </div>

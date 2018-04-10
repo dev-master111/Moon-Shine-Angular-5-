@@ -27,7 +27,7 @@
 
     .triangle {
       position: relative;
-      background-image: url('/assets/images/Triangles/1x/Motives - Triangle@1x.png');
+      background-image: url('/assets/images/triangles/1x/motives-triangle@1x.png');
       background-size: auto 85%;
       background-repeat: no-repeat;
       height: 300px;
@@ -72,38 +72,38 @@
 
           &:nth-child(1) {
             top: 11px;
-            left: 55px;
+            left: 47px;
           }
   
           &:nth-child(2) {
             top: 11px;
-            left: 205px;
+            left: 202px;
           }
   
           &:nth-child(3) {
             top: 154px;
-            left: 132px;
+            left: 128px;
           }
   
           &:nth-child(4) {
             top: 70px;
-            left: 132px;
+            left: 129px;
             font-size: 20px;
           }
   
           &:nth-child(5) {
             top: 93px;
-            left: 78px;
+            left: 73px;
           }
   
           &:nth-child(6) {
             top: 93px;
-            left: 176px;
+            left: 172px;
           }
   
           &:nth-child(7) {
             top: 11px;
-            left: 132px;
+            left: 128px;
           }
         }
       }
@@ -137,8 +137,8 @@
 
     .train-impact-member-stats {
       #chartdiv {
-        width		: 400px;
-        height	: 200px;
+        width: 400px;
+        height: 200px;
 
         .amcharts-main-div {
           .amcharts-chart-div {

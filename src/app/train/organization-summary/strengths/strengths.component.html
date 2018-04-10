@@ -7,15 +7,15 @@
   <div class="text-uppercase d-flex flex-column toggle-buttons">
     <a
       class="toggle-button"
-      [class.active]="curTab === 'strengths'" 
-      (click)="curTab = 'strengths'" 
+      [class.active]="selectedButton === 'strengths'" 
+      (click)="onStrengths()" 
       l10nTranslate>
       discover_sections_reasons_strengths_tab_name
     </a>
     <a
       class="toggle-button"
-      [class.active]="curTab ==='overdone'" 
-      (click)="curTab = 'overdone'" 
+      [class.active]="selectedButton ==='overdone'" 
+      (click)="onOverdone()" 
       l10nTranslate>
       discover_sections_strengths_overdone_strengths_tab_name
     </a>

@@ -18,7 +18,6 @@
       <div class="sdi-date">
         <span l10nTranslate>train_text_sdi2</span>
         <span>{{ user.sdiDate | date:'d MMMM y' }}</span>
-        <!-- <span [innerHtml]="translateTemplate('train_text_sdi2', {sdiDate: user.sdiDate})"></span> -->
       </div>
     </div>
     <div class="d-flex middle-content-holder">
@@ -30,11 +29,11 @@
           </div>
           <div class="line-facilitator"></div>
           <div class="csa-certified">
-            <img src="assets/images/Train/Train_Card_bluestar_circle.svg"/>
+            <img src="assets/images/train/train-card-bluestar-circle.svg"/>
             <div l10nTranslate>train_csa_certified</div>
           </div>
           <div class="csa-certified">
-            <img src="assets/images/Train/Train_Card_bluestar_circle.svg"/>
+            <img src="assets/images/train/train-card-bluestar-circle.svg"/>
             <div l10nTranslate>train_csr_certified</div>
           </div>
         </div>
@@ -84,7 +83,7 @@
   <div class="d-flex text-uppercase rounded-bottom bottom-bar">
     <div class="d-flex align-items-center re-gen-div">
       <app-icon-button
-        [iconUrl]="'assets/images/Icons/Train_Re-Gen.svg'"
+        [iconUrl]="'assets/images/icons/train-re-gen.svg'"
         [text]="'train_re_gen_text'"
         (onclick)="reGenerate()">
       </app-icon-button>

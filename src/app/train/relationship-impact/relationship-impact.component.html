@@ -4,7 +4,9 @@
     <div class="relactionship-impact-number">{{ relationshipImpacts }}</div>
     <div class="text-better-message" l10nTranslate>train_sending_better_messages</div>
     <div class="d-flex justify-content-center three-dots-container">
-      <div class="dot" [class.active]="true"></div>
+      <div>
+        <div class="dot" [class.active]="true"></div>
+      </div>
       <div class="dot" [class.active]="false"></div>
       <div class="dot" [class.active]="false"></div>
     </div>
@@ -15,11 +17,11 @@
       <div class="d-flex align-items-end detail-content">
         <div>
           <div class="completed-number">{{ sdiCompletedNumber }}</div>
-          <div class="bottom-description" l10nTranslate>inventory_text_completed</div>
+          <div class="text-uppercase bottom-description" l10nTranslate>inventory_text_completed</div>
         </div>
         <div>
           <div class="pending-number">{{ sdiPendingNumber }}</div>
-          <div class="bottom-description" l10nTranslate>train_text_pending</div>
+          <div class="text-uppercase bottom-description" l10nTranslate>train_text_pending</div>
         </div>  
       </div>
     </div>
@@ -29,11 +31,11 @@
       <div class="d-flex align-items-end detail-content">
         <div>
           <div class="completed-number">{{ feedbackCompletedNumber }}</div>
-          <div class="bottom-description" l10nTranslate>inventory_text_completed</div>
+          <div class="text-uppercase bottom-description" l10nTranslate>inventory_text_completed</div>
         </div>
         <div>
           <div class="pending-number">{{ feedbackPendingNumber }}</div>
-          <div class="bottom-description" l10nTranslate>train_text_pending</div>
+          <div class="text-uppercase bottom-description" l10nTranslate>train_text_pending</div>
         </div>  
       </div>
     </div>
@@ -43,11 +45,11 @@
       <div class="d-flex align-items-end detail-content">
         <div>
           <div class="completed-number">{{ roleExpectationNumber }}</div>
-          <div class="bottom-description" l10nTranslate>inventory_text_completed</div>
+          <div class="text-uppercase bottom-description" l10nTranslate>inventory_text_completed</div>
         </div>
         <div>
           <div class="pending-number">{{ roleExpectationPendingNumber }}</div>
-          <div class="bottom-description" l10nTranslate>train_text_pending</div>
+          <div class="text-uppercase bottom-description" l10nTranslate>train_text_pending</div>
         </div>  
       </div>
     </div>  

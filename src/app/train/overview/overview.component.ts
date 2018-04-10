@@ -22,7 +22,7 @@ export class OverviewComponent implements OnInit {
     private colorizeMvsCsService: ColorizeMvsCsService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     // Initialize input data
     this.user = this.user || {
       avatar: '',
@@ -43,11 +43,11 @@ export class OverviewComponent implements OnInit {
     };
   }
 
-  getGraphURL() {
-    return `assets/images/Icons/Graph - ${Math.ceil(this.user.facilitatorRatingScore)}.svg`;
+  public getGraphURL() {
+    return `assets/images/icons/graph-${Math.ceil(this.user.facilitatorRatingScore)}.svg`;
   }
 
-  copiedToClipboardAlert() {
+  public copiedToClipboardAlert() {
     this._notifications.html(`Copied to clipboard!`, 'success', {
       clickToClose: true,
       pauseOnHover: true,
@@ -57,7 +57,13 @@ export class OverviewComponent implements OnInit {
     });
   }
 
-  reGenerate() {
-
+  public reGenerate() {
+    this._notifications.html(`Platform key has been re-generated!`, 'success', {
+      clickToClose: true,
+      pauseOnHover: true,
+      showProgressBar: false,
+      timeOut: 2000,
+      position: ['middle', 'center']
+    });
   }
 }

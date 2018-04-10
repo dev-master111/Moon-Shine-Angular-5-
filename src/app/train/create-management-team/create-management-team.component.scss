@@ -2,7 +2,7 @@
 @import '../../../variables';
 
 .create-management-team-component {
-  background-image: url('/assets/images/Train/Management.png');
+  background-image: url('/assets/images/train/create-management-team-bg@2x.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 435px;
@@ -24,7 +24,7 @@
     }
   }
 
-  a.btn-create-team {
+  a.create-team-button {
     font-family: "proxima_novamedium", Arial, sans-serif;
     letter-spacing: 1px;
     padding: 15px 60px; 

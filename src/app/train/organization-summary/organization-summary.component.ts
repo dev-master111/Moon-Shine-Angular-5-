@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { NotificationsService } from 'angular2-notifications';
 
 import { Motive } from '../../shared/models';
 
@@ -9,13 +10,15 @@ import { Motive } from '../../shared/models';
   encapsulation: ViewEncapsulation.None
 })
 export class OrganizationSummaryComponent implements OnInit {
-  curTab: string;
+  selectedTab: string;
   motives: Motive[];
 
-  constructor() { }
+  constructor(
+    private _notifications: NotificationsService
+  ) { }
 
-  ngOnInit() {
-    this.curTab = 'motives';
+  public ngOnInit() {
+    this.selectedTab = 'motives';
     this.motives = [
       {
         text: 'blue',
@@ -48,4 +51,13 @@ export class OrganizationSummaryComponent implements OnInit {
     ];
   }
 
+  public downloadPdfReport() {
+    this._notifications.html(`Download PDF Report Button Clicked!`, 'success', {
+      clickToClose: true,
+      pauseOnHover: true,
+      showProgressBar: false,
+      timeOut: 2000,
+      position: ['middle', 'center']
+    });
+  }
 }

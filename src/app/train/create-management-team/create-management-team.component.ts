@@ -14,7 +14,7 @@ export class CreateManagementTeamComponent implements OnInit {
     private commonService: CommonService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }

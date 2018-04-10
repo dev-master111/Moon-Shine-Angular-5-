@@ -12,14 +12,13 @@
       <div class="performance-label" l10nTranslate>common_text_performance</div>
       <div class="percent-numbers">
         <div *ngFor="let motive of motives">
-          {{ motive.percentage }}
-          <span>%</span>
+          {{ motive.percentage / 100 | percent }}
         </div>
       </div>
       <div class="d-flex legend">
         <div class="text-right legend-left">
           <div *ngFor="let motive of motives">
-            {{ motive.percentage }}%
+            {{ motive.percentage / 100 | percent }}
           </div>
         </div>  
         <div class="text-left legend-right">

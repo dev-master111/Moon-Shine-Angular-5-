@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Language, TranslationService } from 'angular-l10n';
 
 import { User } from '../shared/models';
@@ -6,7 +6,8 @@ import { User } from '../shared/models';
 @Component({
   selector: 'app-train',
   templateUrl: './train.component.html',
-  styleUrls: ['./train.component.scss']
+  styleUrls: ['./train.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TrainComponent implements OnInit {
   user: User;
@@ -15,9 +16,9 @@ export class TrainComponent implements OnInit {
     public translationService: TranslationService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.user = {
-      avatar: 'assets/images/Teams/Icon_SusanAnderson@3x.png',
+      avatar: 'assets/images/teams/icon-susan-anderson@3x.png',
       name: 'Susan Anderson',
       jobTitle: 'Director of HR',
       motives: 'HUB',

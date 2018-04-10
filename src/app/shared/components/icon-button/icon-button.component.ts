@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-icon-button',
   templateUrl: './icon-button.component.html',
-  styleUrls: ['./icon-button.component.scss']
+  styleUrls: ['./icon-button.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class IconButtonComponent implements OnInit {
   @Input() iconUrl;
@@ -12,10 +13,10 @@ export class IconButtonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
-  onClick(event: any) {
+  public onClick(event: any) {
     this.onclick.emit(event);
   }
 }

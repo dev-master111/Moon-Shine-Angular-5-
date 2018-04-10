@@ -22,7 +22,7 @@
         class="text-left conflict-sequence"
         *ngFor="let conflictSequence of conflictSequences">
         <span class="mixed-text" [innerHtml]="colorizeMvsCsService.conflictSequenceHtml(conflictSequence.mixedText)"></span>
-        <span class="percentage">{{ conflictSequence.percentage }}%</span>
+        <span class="percentage">{{ conflictSequence.percentage / 100 | percent }}</span>
       </div>
     </div>
   </div>

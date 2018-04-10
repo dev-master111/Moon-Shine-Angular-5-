@@ -17,13 +17,11 @@
 @mixin number-style {
   font-family: "proxima_novamedium", Arial, sans-serif;
   font-size: 38px;
-  font-weight: 500;
 }
 
 @mixin small-number-style {
   font-family: "proxima_novamedium", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 500;
   color: $light-gray;
   margin-bottom: 8px;
 }
@@ -45,7 +43,6 @@
 
     .relactionship-impact-number {
       font-family: "proxima_novamedium", Arial, sans-serif;
-      font-weight: 500;
       font-size: 64px;
       line-height: 1;
       color: $medium-blue;
@@ -74,13 +71,13 @@
   }
 
   .bottom-container {
-    background-image: linear-gradient(to bottom, rgba(248, 248, 248, 0.51), #c5c8c9);
+    background-image: linear-gradient(to bottom, rgba(248, 248, 248, 0.51), $lighter-gray);
     font-size: 13px;
     padding: 40px;
 
     .divider {
       width: 2px;
-      border: solid 1px #b2b2b2;
+      border: solid 1px $slight-light-gray;
       margin: 18px 0;
     }
 
@@ -111,7 +108,7 @@
     }
 
     .feedback-section {
-      color: #e62550;
+      color: $dark-red;
 
       .title-feedback {
         @include title-style;
@@ -131,7 +128,7 @@
     }
 
     .role-expectation-section {
-      color: #00aa6d;
+      color: $heavy-green;
 
       .title-role-expectation {
         @include title-style;

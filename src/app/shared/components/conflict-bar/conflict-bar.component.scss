@@ -2,9 +2,6 @@
 @import '../../../../mixins';
 @import '../../../../variables';
 
-$conflict-bar-base-width: 740px;
-$conflict-bar-base-height: 31px;
-
 .color {
   @include pspPersonalityColors;
 }
@@ -14,8 +11,8 @@ $conflict-bar-base-height: 31px;
   font-size: $base-font-size;
   line-height: normal;
   color: $white;
-  width: $conflict-bar-base-width*0.05;
-  height: $conflict-bar-base-height;
+  width: 37px;
+  height: 31px;
   margin-right: 4px;
 
   @include pspBackgroundPersonalityColors;
@@ -23,10 +20,9 @@ $conflict-bar-base-height: 31px;
 
 .detail {
   flex: 1;
-  // width: $conflict-bar-base-width;
 
   .top-bar {
-    height: $conflict-bar-base-height*0.58;
+    height: 18px;
     margin-bottom: 2px;
 
     @include pspBackgroundPersonalityColors;

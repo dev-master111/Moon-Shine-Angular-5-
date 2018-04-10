@@ -1,22 +1,30 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { CommonService } from '../../../shared/services';
 
 @Component({
   selector: 'app-strengths',
   templateUrl: './strengths.component.html',
-  styleUrls: ['./strengths.component.scss']
+  styleUrls: ['./strengths.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class StrengthsComponent implements OnInit {
   @Input() memberCount;
-  curTab: string;
+  selectedButton: string;
 
   constructor(
     private commonService: CommonService
   ) { }
 
-  ngOnInit() {
-    this.curTab = 'strengths';
+  public ngOnInit() {
+    this.selectedButton = 'strengths';
   }
 
+  public onStrengths() {
+    this.selectedButton = 'strengths';
+  }
+
+  public onOverdone() {
+    this.selectedButton = 'overdone';
+  }
 }

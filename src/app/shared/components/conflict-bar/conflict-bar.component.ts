@@ -17,7 +17,7 @@ export class ConflictBarComponent implements OnInit {
     private colorizeMvsCsService: ColorizeMvsCsService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     // Initialize input data
     this.conflictBar = this.conflictBar || {
       barColor: '',

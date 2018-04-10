@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { CommonService } from '../../shared/services';
 
 @Component({
   selector: 'app-relationship-impact',
   templateUrl: './relationship-impact.component.html',
-  styleUrls: ['./relationship-impact.component.scss']
+  styleUrls: ['./relationship-impact.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RelationshipImpactComponent implements OnInit {
   @Input() relationshipImpacts;
@@ -20,7 +21,7 @@ export class RelationshipImpactComponent implements OnInit {
     private commonService: CommonService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.relationshipImpacts = this.commonService.numberWithCommas(this.relationshipImpacts);
     this.sdiCompletedNumber = this.commonService.numberWithCommas(this.sdiCompletedNumber);
     this.sdiPendingNumber = this.commonService.numberWithCommas(this.sdiPendingNumber);

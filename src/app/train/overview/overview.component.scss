@@ -1,7 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
 
-$train-very-dark-blue: #4a90e2;
 $left-panel-width: 171px;
 $right-panel-width: 140px;
 
@@ -15,9 +14,9 @@ $right-panel-width: 140px;
       font-family: "proxima_novamedium", Arial, sans-serif;
       font-size: 40px;
       line-height: 37px;
-      color: $train-very-dark-blue;
-      // border-bottom: 3px solid;
-      // border-bottom-color: #abc6f3;
+      color: $heavy-blue;
+      border-bottom: 2px solid $very-light-blue;
+      text-decoration: none;
       display: inline-block;
       margin-top: 30px;  
     }
@@ -86,9 +85,9 @@ $right-panel-width: 140px;
       
       .summary-section {
         .red-facilitator-banner {
-          background-image: url(/assets/images/Train/Train_Card_Red_Ribbon.svg);
+          background-image: url(/assets/images/train/train-card-red-ribbon.svg);
           background-size: cover;
-          padding: 15px 9px 45px 10px;
+          padding: 14px 9px 45px 10px;
 
           .text-premier {
             font-family: "proxima_novabold", Arial, sans-serif;
@@ -137,7 +136,7 @@ $right-panel-width: 140px;
           .facilitator-rating-score {
             font-family: "proxima_novaregular", Arial, sans-serif; 
             font-size: 48px;
-            color: $train-very-dark-blue;
+            color: $heavy-blue;
           }
   
           .text-out-of-5 {
@@ -188,7 +187,7 @@ $right-panel-width: 140px;
         font-family: "proxima_novabold", Arial, sans-serif;
         letter-spacing: 0.6px;
         padding-bottom: 3px;
-        color: #eeeeee;
+        color: $extra-light-gray;
       }
 
       .platform-key {
@@ -221,6 +220,9 @@ $right-panel-width: 140px;
         line-height: 1;
         letter-spacing: 1.3px;
         color: $white;
+        border-bottom: solid 1px $medium-blue;
+        text-decoration: none;
+        padding-bottom: 2px;
       }
     }
   }
